@@ -59,7 +59,7 @@ View, которое позволяет прокручивать и масшта
 использования switch для скрытия/отображения элементов на экране, (`.isOn, .onTintColor, .thumbTintColor`) 
 
 - [UIPickerView](https://developer.apple.com/documentation/uikit/uipickerview)
-вращающийся барабан с возможностью выбора среди элементов. [UIPickerViewDelegate](https://developer.apple.com/documentation/uikit/uipickerviewdelegate), и [UIPickerViewDataSource](https://developer.apple.com/documentation/uikit/uipickerviewdatasource). Отдельная кнопка в PickerView [#UIToolbar](https://developer.apple.com/documentation/uikit/uitoolbar) и [#UIBarButtonItem](https://developer.apple.com/documentation/uikit/uibarbuttonitem). При выборе textField за место клавиатуры по умолчанию, вызывается PickerView.
+вращающийся барабан с возможностью выбора среди элементов. [UIPickerViewDelegate](https://developer.apple.com/documentation/uikit/uipickerviewdelegate), и [UIPickerViewDataSource](https://developer.apple.com/documentation/uikit/uipickerviewdatasource). Отдельная кнопка в PickerView [UIToolbar](https://developer.apple.com/documentation/uikit/uitoolbar) и [UIBarButtonItem](https://developer.apple.com/documentation/uikit/uibarbuttonitem). При выборе textField за место клавиатуры по умолчанию, вызывается PickerView.
 
 <img alt="gif" src="images/UISegmentedControl.gif" height = 510 width = 233 />
 
@@ -81,10 +81,36 @@ View, которое позволяет прокручивать и масшта
 
 ---
 
-### [ArtCover]()
+### [ArtCover](https://github.com/artemiosdev/Small-projects/tree/main/ArtCover/ArtCover)
 
+- [Struct](https://docs.swift.org/swift-book/LanguageGuide/ClassesAndStructures.html)
+- [Navigation Controller Scene](https://developer.apple.com/documentation/uikit/uinavigationcontroller)
+- [UINavigationItem](https://developer.apple.com/documentation/uikit/uinavigationitem)
+- [UITableViewController](https://developer.apple.com/documentation/uikit/uitableviewcontroller)
+- [UIListContentConfiguration](https://developer.apple.com/documentation/uikit/uilistcontentconfiguration) - конфигурация содержимого для представления содержимого на основе списка
+- [prepare(for:sender:)](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621490-prepare) - уведомляет контроллер представления о том, что переход вот-вот будет выполнен.
+- [tableView(_:numberOfRowsInSection:)](https://developer.apple.com/documentation/uikit/uitableviewdatasource/1614931-tableview) - указывает источнику данных возвращать количество строк в заданном разделе табличного представления.
+- [tableView(_:cellForRowAt:)](https://developer.apple.com/documentation/uikit/uitableviewdatasource/1614861-tableview) - запрашивает у источника данных ячейку для вставки в определенном месте табличного представления
+
+<img alt="gif" src="images/ArtCover.gif" height = 510 width = 233 />
 
 ---
 
-### [ArtCoverCollectionView]()
+### [ArtCoverCollectionView](https://github.com/artemiosdev/Small-projects/tree/main/ArtCoverCollectionView/ArtCoverCollectionView)
+
+- [Struct](https://docs.swift.org/swift-book/LanguageGuide/ClassesAndStructures.html)
+- [Navigation Controller Scene](https://developer.apple.com/documentation/uikit/uinavigationcontroller)
+- [UINavigationItem](https://developer.apple.com/documentation/uikit/uinavigationitem)
+- [UICollectionViewController](https://developer.apple.com/documentation/uikit/uicollectionviewcontroller) - контроллер представления, который специализируется на управлении представлением коллекции.
+- [UICollectionViewCell](https://developer.apple.com/documentation/uikit/uicollectionviewcell)
+- [UICollectionViewFlowLayout](https://developer.apple.com/documentation/uikit/uicollectionviewflowlayout) - верстка элемента кодом
+- [prepare(for:sender:)](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621490-prepare) - уведомляет контроллер представления о том, что переход вот-вот будет выполнен.
+- [collectionView(_:numberOfItemsInSection:)](https://developer.apple.com/documentation/uikit/uicollectionviewdatasource/1618058-collectionview) - запрашивает у вашего объекта источника данных количество элементов в указанном разделе.
+- [collectionView(_:cellForItemAt:)](https://developer.apple.com/documentation/uikit/uicollectionviewdatasource/1618029-collectionview) - запрашивает у вашего объекта источника данных ячейку, соответствующую указанному элементу в представлении коллекции. 
+
+<img alt="gif" src="images/ArtCoverCollectionView.gif" height = 510 width = 233 />
+
+---
+
+
 
