@@ -66,6 +66,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
+                                        <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xVv-2t-3KN">
                                         <rect key="frame" x="0.0" y="200" width="375" height="190"/>

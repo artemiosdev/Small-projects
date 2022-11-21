@@ -112,9 +112,17 @@ View, которое позволяет прокручивать и масшта
 
 ---
 
+### [UIStackView]()
+
+[StackView](https://developer.apple.com/documentation/uikit/uistackview) - streamlined interface for laying out a collection of views in either a column or a row.
+
+<img alt="gif" src="images/UIStackView.gif" height = 510 width = 510 />
+
+---
+
 ### [UITabBar]() 
-[TabBar](https://developer.apple.com/documentation/uikit/uitabbar) 
-- a control that displays one or more buttons in a tab bar for selecting between different subtasks, views, or modes in an app.
+
+[TabBar](https://developer.apple.com/documentation/uikit/uitabbar) - a control that displays one or more buttons in a tab bar for selecting between different subtasks, views, or modes in an app.
 
 <img alt="gif" src="images/UITabBar.gif" height = 510 width = 233 />
 
