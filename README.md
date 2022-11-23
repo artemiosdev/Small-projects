@@ -112,7 +112,7 @@ View, которое позволяет прокручивать и масшта
 
 ---
 
-### [UIStackView]()
+### [UIStackView](https://github.com/artemiosdev/Small-projects/tree/main/UIStackView/UIStackView)
 
 [StackView](https://developer.apple.com/documentation/uikit/uistackview) - streamlined interface for laying out a collection of views in either a column or a row.
 
@@ -120,13 +120,36 @@ View, которое позволяет прокручивать и масшта
 
 ---
 
-### [UITabBar]() 
+### [UITabBar](https://github.com/artemiosdev/Small-projects/tree/main/UITabBar/UITabBar) 
 
 [TabBar](https://developer.apple.com/documentation/uikit/uitabbar) - a control that displays one or more buttons in a tab bar for selecting between different subtasks, views, or modes in an app.
 
 <img alt="gif" src="images/UITabBar.gif" height = 510 width = 233 />
 
 ---
+### [AwesomeBrowser](https://github.com/artemiosdev/Small-projects/tree/main/AwesomeBrowser/AwesomeBrowser)
 
+- [WebKit](https://developer.apple.com/documentation/webkit) - integrate web content seamlessly into your app, and customize content interactions to meet your app’s needs.
+- [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview)  - an object that displays interactive web content, such as for an in-app browser.
+- [WKNavigationDelegate](https://developer.apple.com/documentation/webkit/wknavigationdelegate) - methods for accepting or rejecting navigation changes, and for tracking the progress of navigation requests.
+- [UITextFieldDelegate](https://developer.apple.com/documentation/uikit/uitextfielddelegate) - a set of optional methods to manage the editing and validation of text in a text field object.
+- [URL](https://developer.apple.com/documentation/foundation/url)
+- [URLRequest](https://developer.apple.com/documentation/foundation/urlrequest)
+- [load(_:)](https://developer.apple.com/documentation/webkit/wkwebview/1414954-load) - loads the web content that the specified URL request object references and navigates to that content.
+- [webView.allowsBackForwardNavigationGestures](https://developer.apple.com/documentation/webkit/wkwebview/1414995-allowsbackforwardnavigationgestu) - Boolean value that indicates whether horizontal swipe gestures trigger backward and forward page navigation. Добавим свайпы вперед и назад
+
+Свойства `webView`
+- `canGoBack` -  Boolean value that indicates whether there is a valid back item in the back-forward list.
+- `canGoForward` - a Boolean value that indicates whether there is a valid forward item in the back-forward list.
+
+И методы `webView`
+- `goBack()` - navigates to the back item in the back-forward list. New navigation to the requested item, or nil if there is no back item in the back-forward list.
+- `goForward()` - navigates to the forward item in the back-forward list. New navigation to the requested item, or nil if there is no forward item in the back-forward list.
+
+- [resignFirstResponder()](https://developer.apple.com/documentation/uikit/uiresponder/1621097-resignfirstresponder) - notifies this object that it has been asked to relinquish its status as first responder in its window. Им "скрываем" клавиатуру после ввода нужного адреса ссылки.
+
+<img alt="gif" src="images/AwesomeBrowser.gif" height = 510 width = 233 />
+
+---
 
 
