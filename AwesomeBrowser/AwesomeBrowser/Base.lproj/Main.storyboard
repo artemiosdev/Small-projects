@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,34 +13,77 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AwesomeBrowser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tIW-fY-7TK">
-                                <rect key="frame" x="0.0" y="64" width="414" height="832"/>
+                                <rect key="frame" x="0.0" y="83" width="390" height="761"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCD-JM-FZ9">
+                                <rect key="frame" x="304.33333333333331" y="44" width="69.666666666666686" height="34"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Вперед" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="forwardButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gMo-73-rJn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kc9-LV-sZb">
+                                <rect key="frame" x="19.999999999999996" y="44" width="61.666666666666657" height="34"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Назад">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="backButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CcI-Mt-nrU"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QLJ-YH-Um8">
+                                <rect key="frame" x="95.333333333333314" y="44" width="208" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="208" id="oWk-fN-kuz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Kc9-LV-sZb" firstAttribute="top" secondItem="QLJ-YH-Um8" secondAttribute="top" id="0cj-C6-jxp"/>
+                            <constraint firstItem="iCD-JM-FZ9" firstAttribute="bottom" secondItem="QLJ-YH-Um8" secondAttribute="bottom" id="9kK-xa-zaY"/>
+                            <constraint firstItem="iCD-JM-FZ9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="A9O-yG-VkX"/>
                             <constraint firstItem="tIW-fY-7TK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AV3-dq-Je5"/>
-                            <constraint firstItem="tIW-fY-7TK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="FQq-iy-48Y"/>
+                            <constraint firstItem="tIW-fY-7TK" firstAttribute="top" secondItem="QLJ-YH-Um8" secondAttribute="bottom" constant="5" id="BiL-rJ-e6P"/>
+                            <constraint firstItem="iCD-JM-FZ9" firstAttribute="leading" secondItem="QLJ-YH-Um8" secondAttribute="trailing" constant="1" id="DxA-4B-DIT"/>
+                            <constraint firstItem="Kc9-LV-sZb" firstAttribute="bottom" secondItem="QLJ-YH-Um8" secondAttribute="bottom" id="IZd-JE-Tqj"/>
+                            <constraint firstItem="iCD-JM-FZ9" firstAttribute="baseline" secondItem="Kc9-LV-sZb" secondAttribute="firstBaseline" id="LeY-q2-XBO"/>
+                            <constraint firstItem="iCD-JM-FZ9" firstAttribute="baseline" secondItem="Kc9-LV-sZb" secondAttribute="baseline" id="Scx-NG-inR"/>
+                            <constraint firstItem="QLJ-YH-Um8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Kc9-LV-sZb" secondAttribute="trailing" constant="6" id="UX8-qJ-5HV"/>
+                            <constraint firstItem="Kc9-LV-sZb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Utf-lO-Jk5"/>
                             <constraint firstItem="tIW-fY-7TK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="W2q-aE-2Un"/>
+                            <constraint firstItem="iCD-JM-FZ9" firstAttribute="top" secondItem="QLJ-YH-Um8" secondAttribute="top" id="gES-XJ-iNh"/>
+                            <constraint firstItem="QLJ-YH-Um8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iEh-77-KLJ"/>
                             <constraint firstAttribute="bottom" secondItem="tIW-fY-7TK" secondAttribute="bottom" id="lXz-My-cgQ"/>
+                            <constraint firstItem="iCD-JM-FZ9" firstAttribute="firstBaseline" secondItem="Kc9-LV-sZb" secondAttribute="baseline" id="ta2-td-i8n"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="Kc9-LV-sZb" id="muh-HN-w2M"/>
+                        <outlet property="forwardButton" destination="iCD-JM-FZ9" id="Bad-II-fKq"/>
+                        <outlet property="urlTextField" destination="QLJ-YH-Um8" id="EQ8-E9-ymg"/>
                         <outlet property="webView" destination="tIW-fY-7TK" id="6qN-S6-QYg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23.188405797101453" y="67.633928571428569"/>
+            <point key="canvasLocation" x="-24.615384615384613" y="67.535545023696685"/>
         </scene>
     </scenes>
     <resources>
