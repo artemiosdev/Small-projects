@@ -151,5 +151,15 @@ View, которое позволяет прокручивать и масшта
 <img alt="gif" src="images/AwesomeBrowser.gif" height = 510 width = 233 />
 
 ---
+### [UIContainerView](https://github.com/artemiosdev/Small-projects/tree/main/UIContainerView/UIContainerView)
 
+Определяет область в иерархии представлений контроллера представления для размещения дочернего child view controller. The child view controller указывается с помощью встроенного перехода segue.
+
+- [Struct](https://docs.swift.org/swift-book/LanguageGuide/ClassesAndStructures.html)
+- [UITableViewController](https://developer.apple.com/documentation/uikit/uitableviewcontroller)
+- [tableView(_:numberOfRowsInSection:)](https://developer.apple.com/documentation/uikit/uitableviewdatasource/1614931-tableview) - указывает источнику данных возвращать количество строк в заданном разделе табличного представления.
+- [tableView(_:cellForRowAt:)](https://developer.apple.com/documentation/uikit/uitableviewdatasource/1614861-tableview) - запрашивает у источника данных ячейку для вставки в определенном месте табличного представления
+- [tableView(_:didSelectRowAt:)](https://developer.apple.com/documentation/uikit/uitableviewdelegate/1614877-tableview) - tells the delegate a row is selected.
+
+<img alt="gif" src="images/UIContainerView.gif" height = 510 width = 650 />
 
