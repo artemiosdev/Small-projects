@@ -17,12 +17,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     func startPresentation() {
-        // создаем нужный нам для отображения view controller
-        if let pageViewPresentation = storyboard?.instantiateViewController(
-            withIdentifier: "PageViewController") as? PageViewController {
-            // используем инициализатор
-            present(pageViewPresentation, animated: true, completion: nil)
+        let userDefaults = UserDefaults.standard
+        // если key есть в системе, то будет true
+        let presentationWasViewed = userDefaults.bool(forKey: "presentationWasViewed")
+        if presentationWasViewed == false {
+            // создаем нужный нам для отображения view controller
+            if let pageViewPresentation = storyboard?.instantiateViewController(
+                withIdentifier: "PageViewController") as? PageViewController {
+                // используем инициализатор
+                present(pageViewPresentation, animated: true, completion: nil)
+            }
         }
+        
     }
 }
 

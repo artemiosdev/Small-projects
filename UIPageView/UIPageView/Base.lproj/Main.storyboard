@@ -68,20 +68,45 @@
                                 <color key="pageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" systemColor="systemRedColor"/>
                             </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPh-xT-OL4">
+                                <rect key="frame" x="86" y="632" width="218" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SUS-3c-rxg"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Close Presentation">
+                                            <attributes>
+                                                <font key="NSFont" size="17" name="Menlo-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closePresentation:" destination="LZv-jF-TrY" eventType="touchUpInside" id="m2t-q2-duc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DGD-lp-8kS"/>
                         <color key="backgroundColor" red="0.2501860119" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wSj-be-j5G" firstAttribute="top" secondItem="DGD-lp-8kS" secondAttribute="top" constant="114" id="28Y-cX-FCX"/>
                             <constraint firstItem="wSj-be-j5G" firstAttribute="leading" secondItem="DGD-lp-8kS" secondAttribute="leading" constant="20" id="5pB-8e-WkR"/>
+                            <constraint firstAttribute="bottom" secondItem="oPh-xT-OL4" secondAttribute="bottom" constant="182" id="KL1-P0-n9c"/>
                             <constraint firstItem="s5u-s1-ofG" firstAttribute="centerX" secondItem="DGD-lp-8kS" secondAttribute="centerX" id="cd4-X6-Cww"/>
                             <constraint firstItem="DGD-lp-8kS" firstAttribute="trailing" secondItem="wSj-be-j5G" secondAttribute="trailing" constant="20" id="fxp-z7-jOZ"/>
+                            <constraint firstItem="oPh-xT-OL4" firstAttribute="centerX" secondItem="s5u-s1-ofG" secondAttribute="centerX" id="gda-XV-VeC"/>
                             <constraint firstItem="DGD-lp-8kS" firstAttribute="bottom" secondItem="s5u-s1-ofG" secondAttribute="bottom" id="qmi-mx-LB0"/>
                             <constraint firstItem="0EE-vX-9l4" firstAttribute="centerY" secondItem="DGD-lp-8kS" secondAttribute="centerY" id="re0-Z6-eCl"/>
                             <constraint firstItem="0EE-vX-9l4" firstAttribute="centerX" secondItem="DGD-lp-8kS" secondAttribute="centerX" id="tK9-zV-9Te"/>
+                            <constraint firstItem="oPh-xT-OL4" firstAttribute="leading" secondItem="DGD-lp-8kS" secondAttribute="leading" constant="86" id="xu5-Vt-OOv"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="closePresentationButton" destination="oPh-xT-OL4" id="lRg-44-FVA"/>
                         <outlet property="emojiLabel" destination="0EE-vX-9l4" id="c4B-5L-PmI"/>
                         <outlet property="pageControl" destination="s5u-s1-ofG" id="uMv-Rf-wdt"/>
                         <outlet property="presentTextLabel" destination="wSj-be-j5G" id="ns6-hM-N9Q"/>
@@ -89,10 +114,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FWD-ln-T9H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1385.5072463768117" y="63.616071428571423"/>
+            <point key="canvasLocation" x="1384.6153846153845" y="63.270142180094787"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
