@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gester Recognizer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozx-db-OTt">
-                                <rect key="frame" x="47" y="204" width="296" height="68"/>
+                                <rect key="frame" x="47" y="204" width="296" height="182"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                                 <color key="textColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -26,15 +26,18 @@
                         <color key="backgroundColor" red="0.49298596382141113" green="0.90964615345001221" blue="0.90393370389938354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ozx-db-OTt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="160" id="5FB-qn-0jJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ozx-db-OTt" secondAttribute="bottom" constant="538" id="Rb4-GE-vWH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ozx-db-OTt" secondAttribute="bottom" constant="424" id="Rb4-GE-vWH"/>
                             <constraint firstItem="ozx-db-OTt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="TIQ-rg-g4u"/>
                             <constraint firstItem="ozx-db-OTt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qQU-p5-kFP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="ozx-db-OTt" id="xve-MU-fyQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23.188405797101453" y="63.616071428571423"/>
+            <point key="canvasLocation" x="-24.615384615384613" y="63.270142180094787"/>
         </scene>
     </scenes>
 </document>
