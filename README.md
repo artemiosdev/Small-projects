@@ -165,7 +165,21 @@ View, которое позволяет прокручивать и масшта
 
 ---
 
-### []()
+### [UIPageView](https://github.com/artemiosdev/Small-projects/tree/main/UIPageView/UIPageView)
+
+C его помощью можно сделать ознакомительный функционал ввиде некой презентации для пользователя который впервые скачал ваше приложение
+
+- [UIPageViewController](https://developer.apple.com/documentation/uikit/uipageviewcontroller) - a container view controller  that manages navigation between pages of content, where a child view controller manages each page
+
+- [UIPageViewControllerDataSource](https://developer.apple.com/documentation/uikit/uipageviewcontrollerdatasource ) – протокол UIPageViewControllerDataSource принимается объектом, который предоставляет контроллеры просмотра контроллеру просмотра страницы по мере необходимости в ответ на жесты навигации. 
+Благодаря ему будем листать нашу презентацию. С ним идут 2 обязательных для протокола метода (`viewControllerBefore` and `viewControllerAfter`, вперед и назад по презентации)
+
+- [viewDidAppear(_:)](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621423-viewdidappear) - уведомляет контроллер представления о том, что его представление было добавлено в иерархию представлений.
+- [class UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults) - интерфейс к базе данных пользователя по умолчанию, где вы постоянно сохраняете пары ключ-значение при запуске вашего приложения. 
+- [set(_:forKey:)](https://developer.apple.com/documentation/foundation/userdefaults/1408905-set) - sets the value of the specified default key to the specified Boolean value.
+- [instantiateViewController(withIdentifier:)](https://developer.apple.com/documentation/uikit/uistoryboard/1616214-instantiateviewcontroller) - cоздает контроллер представления с указанным идентификатором и инициализирует его данными из раскадровки. На основе storyboard with identifier.
+- [present(_:animated:completion:)](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621380-present) - presents a view controller modally.
+- [dismiss(animated:completion:)](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621505-dismiss) - oтклоняет контроллер представления, который был представлен модально контроллером представления.
 
 <img alt="gif" src="images/UIPageView.gif" height = 510 width = 233 />
 
@@ -184,6 +198,7 @@ The base [class](https://developer.apple.com/documentation/uikit/uigesturerecogn
 
 - [addGestureRecognizer(_:)](https://developer.apple.com/documentation/uikit/uiview/1622496-addgesturerecognizer) - прикрепляет a gesture recognizer to the view.
 
-<img alt="gif" src="images/UIGestureRecognizer.gif" height = 510 width = 233 />
+- [require(toFail:)](https://developer.apple.com/documentation/uikit/uigesturerecognizer/1624203-require) - creates a dependency relationship between the gesture recognizer and another gesture recognizer when the objects are created.
 
+<img alt="gif" src="images/UIGestureRecognizer.gif" height = 510 width = 233 />
 

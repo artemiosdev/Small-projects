@@ -39,7 +39,7 @@ class PageViewController: UIPageViewController {
         contentViewController.currentPage = index
         contentViewController.numberOfPages = presentScreenContent.count
         let isLastPage = (index == presentScreenContent.count - 1)
-//         управляем видимостью кнопки
+        // управляем видимостью кнопки
         contentViewController.presentationButtonIsHidden = !isLastPage
         return contentViewController
     }
@@ -55,6 +55,7 @@ extension PageViewController: UIPageViewControllerDataSource {
         pageNumber -= 1
         return showViewControllerAtIndex(pageNumber)
     }
+    
     // переход к след странице после текущей (вперед)
     func pageViewController(_ pageViewController: UIPageViewController,
                             viewControllerAfter viewController: UIViewController) -> UIViewController? {

@@ -29,8 +29,11 @@ class ContentViewController: UIViewController {
         pageControl.currentPage = currentPage
     }
     @IBAction func closePresentation(_ sender: UIButton) {
+        // создадим экземпляр class UserDefaults
+        // некий ключ по которому будем закрывать презентацию
         let userDefaults = UserDefaults.standard
         userDefaults.set(true, forKey: "presentationWasViewed")
+        // метод закрывающий view controller
         dismiss(animated: true, completion: nil)
     }
     
