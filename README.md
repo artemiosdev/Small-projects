@@ -163,3 +163,27 @@ View, которое позволяет прокручивать и масшта
 
 <img alt="gif" src="images/UIContainerView.gif" height = 510 width = 650 />
 
+---
+
+### []()
+
+<img alt="gif" src="images/UIPageView.gif" height = 510 width = 233 />
+
+---
+
+### [UIGestureRecognizer](https://github.com/artemiosdev/Small-projects/tree/main/UIGestureRecognizer/UIGestureRecognizer)
+
+The base [class](https://developer.apple.com/documentation/uikit/uigesturerecognizer) for concrete gesture recognizers. 
+
+- [UISwipeGestureRecognizer](https://developer.apple.com/documentation/uikit/uiswipegesturerecognizer) - a discrete gesture recognizer that interprets swiping gestures in one or more directions.
+- [.direction](https://developer.apple.com/documentation/uikit/uiswipegesturerecognizer/1619178-direction) - the permitted direction of the swipe for this gesture recognizer.
+
+
+- [UITapGestureRecognizer](https://developer.apple.com/documentation/uikit/uitapgesturerecognizer) - a discrete gesture recognizer that interprets single or multiple taps.
+- [numberOfTapsRequired](https://developer.apple.com/documentation/uikit/uitapgesturerecognizer/1623581-numberoftapsrequired) - the number of taps necessary for gesture recognition.
+
+- [addGestureRecognizer(_:)](https://developer.apple.com/documentation/uikit/uiview/1622496-addgesturerecognizer) - прикрепляет a gesture recognizer to the view.
+
+<img alt="gif" src="images/UIGestureRecognizer.gif" height = 510 width = 233 />
+
+
