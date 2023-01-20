@@ -63,6 +63,4 @@ extension PageViewController: UIPageViewControllerDataSource {
         pageNumber += 1
         return showViewControllerAtIndex(pageNumber)
     }
-    
-    
 }
