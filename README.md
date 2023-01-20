@@ -203,7 +203,7 @@ The base [class](https://developer.apple.com/documentation/uikit/uigesturerecogn
 
 ---
 
-### [I am Rich]()
+### [I am Rich](https://github.com/artemiosdev/Small-projects/tree/main/I%20Am%20Rich)
 
 I built copy this a "I am Rish" app. 
 
@@ -218,3 +218,13 @@ I Am Rich was sold on the App Store for US$999.99, €799.99, and GB£599.99, th
 <img alt="image" src="I Am Rich/I am Rish.jpg" height = 510 width = 233> </img> 
 
 <img alt="image" src="I Am Rich/Armin Heinrich app.jpg" height = 310 width = 233> </img> 
+
+---
+
+### [MyCard]()
+I used SwiftUI, simple Scene, and configuration VStack and ZStack.
+
+<img alt="image" src="MyCard/image.jpg"  height = 510 width = 233 > </img> 
+
+---
+
