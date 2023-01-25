@@ -2,6 +2,38 @@
 
 ---
 
+### [Clima](https://github.com/artemiosdev/Small-projects/tree/main/Clima/Clima)
+
+This is a beautiful, dark-mode enabled weather app. You'll be able to check the weather for the current location based on the GPS data from the iPhone as well as by searching for a city manually. 
+
+* dark-mode enabled app.
+
+* use vector images as image assets.
+
+* use the UITextField to get user input. 
+
+* delegate pattern.
+
+* Swift protocols and extensions. 
+
+* Swift guard keyword. 
+
+* Swift computed properties.
+
+* Swift closures and completion handlers.
+
+* URLSession to network and make HTTP requests.
+
+* JSON with the native Encodable and Decodable protocols. 
+
+* Grand Central Dispatch to fetch the main thread.
+
+* Core Location to get the current location from the phone GPS.
+
+  <img alt="image" src="images/Clima.gif"  height = 510 width = 233/>
+
+---
+
 ### [MyCard](https://github.com/artemiosdev/Small-projects/tree/main/MyCard/artem_iosdev)
 I used SwiftUI, simple Scene, and configuration [VStack](https://developer.apple.com/documentation/swiftui/vstack) and [ZStack](https://developer.apple.com/documentation/swiftui/zstack)
 
