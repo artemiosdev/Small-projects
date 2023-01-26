@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD2876ED29828E6700796B2A /* EmojiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2876EC29828E6700796B2A /* EmojiTableViewCell.swift */; };
 		DDB9D55029812CA7000F56FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB9D54F29812CA7000F56FA /* AppDelegate.swift */; };
 		DDB9D55229812CA7000F56FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB9D55129812CA7000F56FA /* SceneDelegate.swift */; };
 		DDB9D55429812CA7000F56FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB9D55329812CA7000F56FA /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD2876EC29828E6700796B2A /* EmojiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTableViewCell.swift; sourceTree = "<group>"; };
 		DDB9D54C29812CA7000F56FA /* EmojiReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB9D54F29812CA7000F56FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDB9D55129812CA7000F56FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				DDB9D55129812CA7000F56FA /* SceneDelegate.swift */,
 				DDB9D55329812CA7000F56FA /* ViewController.swift */,
 				DDB9D56329813290000F56FA /* EmojiTableViewController.swift */,
+				DD2876EC29828E6700796B2A /* EmojiTableViewCell.swift */,
 				DDB9D55529812CA7000F56FA /* Main.storyboard */,
 				DDB9D55829812CA8000F56FA /* Assets.xcassets */,
 				DDB9D55A29812CA8000F56FA /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				DDB9D56429813290000F56FA /* EmojiTableViewController.swift in Sources */,
 				DDB9D55429812CA7000F56FA /* ViewController.swift in Sources */,
+				DD2876ED29828E6700796B2A /* EmojiTableViewCell.swift in Sources */,
 				DDB9D55029812CA7000F56FA /* AppDelegate.swift in Sources */,
 				DDB9D55229812CA7000F56FA /* SceneDelegate.swift in Sources */,
 			);
