@@ -8,7 +8,8 @@
 import UIKit
 
 class EmojiTableViewController: UITableViewController {
-    let objects = [
+    
+    var objects = [
     Emoji(emoji: "🥰", name: "Love", description: "Let's love each other", isFavourite: false),
     Emoji(emoji: "⚽️", name: "Football", description: "Let's play football together",
     isFavourite: false),
@@ -48,50 +49,31 @@ class EmojiTableViewController: UITableViewController {
         return cell
     }
     
+    // отвечает за отображение кнопок меню удаления/добавления при нажатии на Edit
+    // по умолчанию стоит delete
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
     
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
+    // действия при нажатии кнопок из меню Edit
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            objects.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
     
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
+    // включаем возможность перемещения ячеек
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
     
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+    // настройка перемещения ячеек из меню Edit
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        // поменяем ячейки местами, старую зафиксируем в moveEmoji и удалим,
+        // добавим зафиксированную на новое место
+        let moveEmoji = objects.remove(at: sourceIndexPath.row)
+        objects.insert(moveEmoji, at: destinationIndexPath.row)
+        tableView.reloadData()
+    }
 }
