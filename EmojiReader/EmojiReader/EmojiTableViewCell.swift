@@ -25,4 +25,11 @@ class EmojiTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    // настройка ячейки
+    // значения присваиваем в EmojiTableViewController
+    func set(object: Emoji) {
+        self.emojiLabel.text = object.emoji
+        self.smileLabel.text = object.name
+        self.descriptionLabel.text = object.description
+    }
 }
