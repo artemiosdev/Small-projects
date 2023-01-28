@@ -15,18 +15,15 @@ class EmojiTableViewCell: UITableViewCell {
     // срабатывает как только прогрузится ячейка, некий аналог viewDidLoad
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
+    
     // вызывается при нажатии на ячейку
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
+    
     // настройка ячейки
-    // значения присваиваем в EmojiTableViewController
+    // присваиваем значения в EmojiTableViewController
     func set(object: Emoji) {
         self.emojiLabel.text = object.emoji
         self.smileLabel.text = object.name
