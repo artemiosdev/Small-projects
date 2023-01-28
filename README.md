@@ -1,6 +1,14 @@
 Примеры маленьких приложений, с целью знакомства и изучения различного функционала. В каждом из них есть готовые шаблоны/примеры использования. Ниже описание:
 
 ---
+### [EmojiReader](https://github.com/artemiosdev/Small-projects/tree/main/EmojiReader/EmojiReader)
+
+Простое приложение построенное на TableViewController, это простой аналог более сложного приложения [MyPlaces](https://github.com/artemiosdev/MyPlaces).
+В приложении использованы основные принципы работы с таблицей и ячейками.
+
+<img alt="image" src="images/EmojiReader.gif"  height = 510 width = 233/>
+
+---
 
 ### [Clima](https://github.com/artemiosdev/Small-projects/tree/main/Clima/Clima)
 
