@@ -41,5 +41,31 @@ class PhotosCollectionViewController: UICollectionViewController {
 
 // для настройки конфигурации flow layout for cell
 extension PhotosCollectionViewController: UICollectionViewDelegateFlowLayout {
+    // определим размер ячейки
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let itemsPerRow: CGFloat = 2
+        // отступы для 2 изображений, т.е 3 штуки (слева, между ними, справа)
+        let paddingWidth = 20 * (itemsPerRow + 1)
+        // доступная ширина для ячеек
+        let availableWidth = collectionView.frame.width - paddingWidth
+        // ширина объекта
+        let widthPerItem = availableWidth / itemsPerRow
+        return CGSize(width: widthPerItem, height: widthPerItem)
+    }
+    
+    // отступы по всем четырем сторонам от секции
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+    }
+    
+    // интервал между последовательными строками или столбцами раздела
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 30
+    }
+    
+    // интервал между последовательными элементами одной строки или столбца
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
     
 }
