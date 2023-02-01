@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hev-Vh-HOZ">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -13,23 +13,37 @@
             <objects>
                 <collectionViewController id="LlZ-FF-fpt" customClass="PhotosCollectionViewController" customModule="PhotoTapps" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="0C3-yX-922">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2iN-MP-VmQ">
-                            <size key="itemSize" width="120" height="120"/>
+                            <size key="itemSize" width="100" height="100"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="xlm-aR-Fpv" customClass="PhotoCell" customModule="PhotoTapps" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                <rect key="frame" x="-125" y="0.0" width="640" height="480"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7zP-PM-B0F">
-                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jvs-J8-YNT">
+                                    <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dog1" translatesAutoresizingMaskIntoConstraints="NO" id="Rvi-H1-tTM">
+                                            <rect key="frame" x="124" y="0.0" width="100" height="100"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Rvi-H1-tTM" firstAttribute="leading" secondItem="jvs-J8-YNT" secondAttribute="leading" id="Tvd-Ql-UUd"/>
+                                        <constraint firstAttribute="trailing" secondItem="Rvi-H1-tTM" secondAttribute="trailing" id="Z6R-gt-NMV"/>
+                                        <constraint firstAttribute="bottom" secondItem="Rvi-H1-tTM" secondAttribute="bottom" id="hA4-7c-WAQ"/>
+                                        <constraint firstItem="Rvi-H1-tTM" firstAttribute="top" secondItem="jvs-J8-YNT" secondAttribute="top" id="i4H-de-0Ju"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="dogImageView" destination="Rvi-H1-tTM" id="DPv-XW-7b4"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -41,7 +55,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DAX-hZ-yjY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="626.08695652173913" y="79.6875"/>
+            <point key="canvasLocation" x="624.61538461538464" y="79.620853080568722"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fb7-sn-vUO">
@@ -49,7 +63,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hev-Vh-HOZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WyR-Fh-tJy">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -63,6 +77,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="dog1" width="640" height="480"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
