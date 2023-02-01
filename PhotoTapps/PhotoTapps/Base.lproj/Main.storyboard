@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hev-Vh-HOZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9GF-9G-vVI">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -9,71 +9,72 @@
     </dependencies>
     <scenes>
         <!--PhotoTapps-->
-        <scene sceneID="zrV-ZT-Ttv">
+        <scene sceneID="HZW-yc-LuH">
             <objects>
-                <collectionViewController id="LlZ-FF-fpt" customClass="PhotosCollectionViewController" customModule="PhotoTapps" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="0C3-yX-922">
+                <collectionViewController id="Qq8-eM-Adf" customClass="PhotosCollectionViewController" customModule="PhotoTapps" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="2ef-fA-DUs">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2iN-MP-VmQ">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rkR-vq-WCD">
                             <size key="itemSize" width="100" height="100"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="xlm-aR-Fpv" customClass="PhotoCell" customModule="PhotoTapps" customModuleProvider="target">
-                                <rect key="frame" x="-125" y="0.0" width="640" height="480"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="dmf-cq-fKK" customClass="PhotoCell" customModule="PhotoTapps" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jvs-J8-YNT">
-                                    <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="YKs-IU-GaT">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dog1" translatesAutoresizingMaskIntoConstraints="NO" id="Rvi-H1-tTM">
-                                            <rect key="frame" x="124" y="0.0" width="100" height="100"/>
+                                        <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog1" translatesAutoresizingMaskIntoConstraints="NO" id="LDU-vZ-d9q">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Rvi-H1-tTM" firstAttribute="leading" secondItem="jvs-J8-YNT" secondAttribute="leading" id="Tvd-Ql-UUd"/>
-                                        <constraint firstAttribute="trailing" secondItem="Rvi-H1-tTM" secondAttribute="trailing" id="Z6R-gt-NMV"/>
-                                        <constraint firstAttribute="bottom" secondItem="Rvi-H1-tTM" secondAttribute="bottom" id="hA4-7c-WAQ"/>
-                                        <constraint firstItem="Rvi-H1-tTM" firstAttribute="top" secondItem="jvs-J8-YNT" secondAttribute="top" id="i4H-de-0Ju"/>
+                                        <constraint firstItem="LDU-vZ-d9q" firstAttribute="leading" secondItem="YKs-IU-GaT" secondAttribute="leading" id="9FG-wC-s7v"/>
+                                        <constraint firstAttribute="trailing" secondItem="LDU-vZ-d9q" secondAttribute="trailing" id="TrM-lB-rAV"/>
+                                        <constraint firstAttribute="bottom" secondItem="LDU-vZ-d9q" secondAttribute="bottom" id="ajX-Z5-zrT"/>
+                                        <constraint firstItem="LDU-vZ-d9q" firstAttribute="top" secondItem="YKs-IU-GaT" secondAttribute="top" id="dHy-uv-c1K"/>
                                     </constraints>
                                 </collectionViewCellContentView>
+                                <size key="customSize" width="100" height="100"/>
                                 <connections>
-                                    <outlet property="dogImageView" destination="Rvi-H1-tTM" id="DPv-XW-7b4"/>
+                                    <outlet property="dogImageView" destination="LDU-vZ-d9q" id="dpG-Cc-c92"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
-                            <outlet property="dataSource" destination="LlZ-FF-fpt" id="c6C-iv-yDC"/>
-                            <outlet property="delegate" destination="LlZ-FF-fpt" id="rBK-JL-tSe"/>
+                            <outlet property="dataSource" destination="Qq8-eM-Adf" id="iKI-Oe-Zuw"/>
+                            <outlet property="delegate" destination="Qq8-eM-Adf" id="1rx-T5-HIb"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="PhotoTapps" id="gfC-U2-u1n"/>
+                    <navigationItem key="navigationItem" title="PhotoTapps" id="CE2-xa-hkd"/>
                 </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DAX-hZ-yjY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kef-cG-cG7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="624.61538461538464" y="79.620853080568722"/>
+            <point key="canvasLocation" x="1124.6376811594205" y="158.70535714285714"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="fb7-sn-vUO">
+        <scene sceneID="fJG-n3-kii">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hev-Vh-HOZ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9GF-9G-vVI" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WyR-Fh-tJy">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XbH-1Y-KWS">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="LlZ-FF-fpt" kind="relationship" relationship="rootViewController" id="LKY-Oe-rEb"/>
+                        <segue destination="Qq8-eM-Adf" kind="relationship" relationship="rootViewController" id="YGX-ov-INs"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gjp-pt-kbS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="08m-oN-J0D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-284.05797101449275" y="79.6875"/>
+            <point key="canvasLocation" x="214.49275362318843" y="158.70535714285714"/>
         </scene>
     </scenes>
     <resources>
