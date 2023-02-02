@@ -28,6 +28,18 @@ class PhotosCollectionViewController: UICollectionViewController {
 //
 
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "pickPhotoSegue" {
+            // vc до которого мы пытаемся добраться
+            let photoVC = segue.destination as! PhotoViewController
+            // если переход был с ячейки
+            let cell = sender as! PhotoCell
+            // передаем изобржение из ячейки в PhotoViewController
+            photoVC.image = cell.dogImageView.image
+            
+        }
+    }
 
     // MARK: UICollectionViewDataSource
 

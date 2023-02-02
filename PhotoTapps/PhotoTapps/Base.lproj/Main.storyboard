@@ -45,7 +45,7 @@
                                 <size key="customSize" width="100" height="100"/>
                                 <connections>
                                     <outlet property="dogImageView" destination="LDU-vZ-d9q" id="dpG-Cc-c92"/>
-                                    <segue destination="dRK-so-6Ab" kind="presentation" id="Ucc-fu-7Pr"/>
+                                    <segue destination="dRK-so-6Ab" kind="presentation" identifier="pickPhotoSegue" id="Ucc-fu-7Pr"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -86,29 +86,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3pi-hh-pfE">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3pi-hh-pfE">
                                 <rect key="frame" x="0.0" y="282.66666666666669" width="390" height="225"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="225" id="9mw-ES-PdV"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0N-Pj-Uv0">
-                                <rect key="frame" x="130" y="725" width="133" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0N-Pj-Uv0">
+                                <rect key="frame" x="128.66666666666666" y="725" width="132.99999999999997" height="31"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system" title="  Tap to Share">
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="shareAction:" destination="dRK-so-6Ab" eventType="touchUpInside" id="rDj-AW-lfF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qqg-hG-dSE"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="v0N-Pj-Uv0" firstAttribute="centerX" secondItem="zr5-oX-sdl" secondAttribute="centerX" id="HZ6-zy-Jnr"/>
                             <constraint firstItem="qqg-hG-dSE" firstAttribute="trailing" secondItem="3pi-hh-pfE" secondAttribute="trailing" id="Jc7-LO-tyD"/>
                             <constraint firstItem="3pi-hh-pfE" firstAttribute="centerY" secondItem="zr5-oX-sdl" secondAttribute="centerY" id="TLi-cT-NHH"/>
+                            <constraint firstItem="qqg-hG-dSE" firstAttribute="bottom" secondItem="v0N-Pj-Uv0" secondAttribute="bottom" constant="34" id="nwM-8i-RAa"/>
                             <constraint firstItem="3pi-hh-pfE" firstAttribute="leading" secondItem="qqg-hG-dSE" secondAttribute="leading" id="uwn-t6-2nu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="3pi-hh-pfE" id="GIu-uY-Vi8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yKZ-kC-lUy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
