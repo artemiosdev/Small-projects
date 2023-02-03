@@ -1,10 +1,42 @@
 Примеры маленьких приложений, с целью знакомства и изучения различного функционала. В каждом из них есть готовые шаблоны/примеры использования. Ниже описание:
 
 ---
+### [PhotoTapps](https://github.com/artemiosdev/Small-projects/tree/main/PhotoTapps/PhotoTapps)
+Простое приложение построенное на CollectionViewController.
+В приложении использованы основные принципы работы с таблицей и ячейками.
+
+- [Navigation Controller Scene](https://developer.apple.com/documentation/uikit/uinavigationcontroller)
+- [UICollectionViewController](https://developer.apple.com/documentation/uikit/uicollectionviewcontroller) - контроллер представления, который специализируется на управлении представлением коллекции.
+- [UICollectionViewCell](https://developer.apple.com/documentation/uikit/uicollectionviewcell)
+- [UICollectionViewFlowLayout](https://developer.apple.com/documentation/uikit/uicollectionviewflowlayout) - верстка элемента кодом
+- [prepare(for:sender:)](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621490-prepare) - уведомляет контроллер представления о том, что переход вот-вот будет выполнен.
+- [numberOfSections(in:)](https://developer.apple.com/documentation/uikit/uicollectionviewdatasource/1618023-numberofsections) - возвращает количество разделов (section) в коллекции.
+- [collectionView(_:numberOfItemsInSection:)](https://developer.apple.com/documentation/uikit/uicollectionviewdatasource/1618058-collectionview) - запрашивает у вашего объекта источника данных количество элементов в указанном разделе.
+- [collectionView(_:cellForItemAt:)](https://developer.apple.com/documentation/uikit/uicollectionviewdatasource/1618029-collectionview) - запрашивает у вашего объекта источника данных ячейку, соответствующую указанному элементу в представлении коллекции. 
+- [UIActivityViewController](https://developer.apple.com/documentation/uikit/uiactivityviewcontroller) - контроллер представления, который вы используете для предоставления стандартных услуг из своего приложения. Меню по тапу на кнопку "Tap to Share".
+[UIActivityViewController(activityItems:applicationActivities:)](https://developer.apple.com/documentation/uikit/uiactivityviewcontroller/1622019-init) - Инициализирует новый объект контроллера представления активности, который воздействует на указанные данные.
+* **Кастомная настройка ячейки кодом** :
+   - [UICollectionViewDelegateFlowLayout](https://developer.apple.com/documentation/uikit/uiactivityviewcontroller/1622019-init) - Методы, которые позволяют координировать работу с объектом компоновки (#flow layout) потока для реализации компоновки на основе сетки. Методы настройки размера/отступов/направления внутри. Реализуется в extension к class.
+   - [UICollectionViewFlowLayout](https://developer.apple.com/documentation/uikit/uicollectionviewflowlayout) - Объект макета, который организует элементы в сетку с необязательными видами верхнего и нижнего колонтитулов для каждого раздела. Методы настройки размера/отступов/направления внутри. Реализуется в viewDidLoad()
+
+<img alt="image" src="images/PhotoTapps.gif"  height = 510 width = 233/>
+
+---
 ### [EmojiReader](https://github.com/artemiosdev/Small-projects/tree/main/EmojiReader/EmojiReader)
 
 Простое приложение построенное на TableViewController, это простой аналог более сложного приложения [MyPlaces](https://github.com/artemiosdev/MyPlaces).
 В приложении использованы основные принципы работы с таблицей и ячейками.
+
+- [Navigation Controller Scene](https://developer.apple.com/documentation/uikit/uinavigationcontroller)
+- [UITableViewController](https://developer.apple.com/documentation/uikit/uitableviewcontroller)
+- [prepare(for: sender: )](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621490-prepare) - уведомляет контроллер представления о том, что переход вот-вот будет выполнен.
+- [numberOfSections(in:)](https://developer.apple.com/documentation/uikit/uitableviewdatasource/1614860-numberofsections) - возвращает количество разделов (section) в табличном представлении.
+- [tableView(_: numberOfRowsInSection: )](https://developer.apple.com/documentation/uikit/uitableviewdatasource/1614931-tableview) - указывает источнику данных возвращать количество строк в заданном разделе (section) табличного представления.
+- [tableView(_: cellForRowAt: )](https://developer.apple.com/documentation/uikit/uitableviewdatasource/1614861-tableview) - запрашивает у источника данных ячейку для вставки в определенном месте табличного представления
+- [tableView(_:editingStyleForRowAt:)](https://developer.apple.com/documentation/uikit/uitableviewdelegate/1614869-tableview) - запрашивает у делегата стиль редактирования строки в определенном месте табличного представления. У нас в приложении отвечает за отображение кнопок меню удаления/добавления при нажатии на Edit, по умолчанию стоит .delete
+- [tableView(_:canMoveRowAt:)](https://developer.apple.com/documentation/uikit/uitableviewdatasource/1614927-tableview) - запрашивает источник данных, может ли данная строка переместиться в другое место в табличном представлении.
+- [tableView(_:moveRowAt:to:)](https://developer.apple.com/documentation/uikit/uitableviewdatasource/1614867-tableview) - указывает источнику данных переместить строку из определенного местоположения в табличном представлении в другое местоположение. Настройка перемещения ячеек из меню Edit
+- [tableView(_:trailingSwipeActionsConfigurationForRowAt:)](https://developer.apple.com/documentation/uikit/uitableviewdelegate/2902367-tableview) и  [tableView(_:leadingSwipeActionsConfigurationForRowAt:)](https://developer.apple.com/documentation/uikit/uitableviewdelegate/2902366-tableview) - Returns the swipe actions to display on the trailing or leading edge of the row. К ним можно добавить кнопки, которые будут отображаться при активации swipe
 
 <img alt="image" src="images/EmojiReader.gif"  height = 510 width = 233/>
 
@@ -167,10 +199,12 @@ View, которое позволяет прокручивать и масшта
 
 - [Struct](https://docs.swift.org/swift-book/LanguageGuide/ClassesAndStructures.html)
 - [Navigation Controller Scene](https://developer.apple.com/documentation/uikit/uinavigationcontroller)
+<img alt="image" src="images/uinavigationcontroller.jpg"> </img> 
 - [UINavigationItem](https://developer.apple.com/documentation/uikit/uinavigationitem)
 - [UITableViewController](https://developer.apple.com/documentation/uikit/uitableviewcontroller)
 - [UIListContentConfiguration](https://developer.apple.com/documentation/uikit/uilistcontentconfiguration) - конфигурация содержимого для представления содержимого на основе списка
 - [prepare(for:sender:)](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621490-prepare) - уведомляет контроллер представления о том, что переход вот-вот будет выполнен.
+- [numberOfSections(in:)](https://developer.apple.com/documentation/uikit/uitableviewdatasource/1614860-numberofsections) - возвращает количество разделов (section) в табличном представлении.
 - [tableView(_:numberOfRowsInSection:)](https://developer.apple.com/documentation/uikit/uitableviewdatasource/1614931-tableview) - указывает источнику данных возвращать количество строк в заданном разделе табличного представления.
 - [tableView(_:cellForRowAt:)](https://developer.apple.com/documentation/uikit/uitableviewdatasource/1614861-tableview) - запрашивает у источника данных ячейку для вставки в определенном месте табличного представления
 
