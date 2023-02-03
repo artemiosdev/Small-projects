@@ -6,7 +6,6 @@
 //
 
 import UIKit
-
 class PhotoViewController: UIViewController {
     var image: UIImage?
     @IBOutlet weak var photoImageView: UIImageView!
@@ -16,7 +15,13 @@ class PhotoViewController: UIViewController {
     }
     
     @IBAction func shareAction(_ sender: Any) {
-        
+        let shareController = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
+        // отслеживание успешности доставки
+        // по умолчанию имеет 4 параметра, но нам нужно лишь одно
+        shareController.completionWithItemsHandler = { _, bool, _, _ in
+            if bool { print("Успешно") }
+        }
+        // отобразим наш activity
+        present(shareController, animated: true, completion: nil)
     }
-
 }
