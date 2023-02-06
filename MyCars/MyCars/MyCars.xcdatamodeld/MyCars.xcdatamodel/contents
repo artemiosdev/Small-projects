@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19A582a" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21G115" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Car" representedClassName="Car" syncable="YES" codeGenerationType="class">
+        <attribute name="imageData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="lastStarted" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="mark" optional="YES" attributeType="String"/>
+        <attribute name="model" optional="YES" attributeType="String"/>
+        <attribute name="myChoice" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="rating" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="timesDriven" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="tintColor" optional="YES" attributeType="Transformable"/>
+    </entity>
+    <elements>
+        <element name="Car" positionX="-63" positionY="-18" width="128" height="149"/>
+    </elements>
 </model>
