@@ -5,13 +5,14 @@
 //  Created by Artem Androsenko on 07.02.2023.
 //
 
-
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     
+    var context: NSManagedObjectContext!
     var array = [Date]()
     
     lazy var dateFormatter: DateFormatter = {

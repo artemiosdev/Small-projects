@@ -13,6 +13,7 @@
 		3585ECD823AB6B7200F49C82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3585ECD623AB6B7200F49C82 /* Main.storyboard */; };
 		3585ECDA23AB6B7400F49C82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3585ECD923AB6B7400F49C82 /* Assets.xcassets */; };
 		3585ECDD23AB6B7400F49C82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3585ECDB23AB6B7400F49C82 /* LaunchScreen.storyboard */; };
+		DDE9E00E299291D800A6C5A3 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE9E00D299291D800A6C5A3 /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3585ECD923AB6B7400F49C82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3585ECDC23AB6B7400F49C82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3585ECDE23AB6B7400F49C82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDE9E00D299291D800A6C5A3 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				3585ECD023AB6B7200F49C82 /* AppDelegate.swift */,
 				3585ECD223AB6B7200F49C82 /* SceneDelegate.swift */,
+				DDE9E00D299291D800A6C5A3 /* CoreDataStack.swift */,
 				3585ECD423AB6B7200F49C82 /* ViewController.swift */,
 				3585ECD623AB6B7200F49C82 /* Main.storyboard */,
 				3585ECD923AB6B7400F49C82 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 				3585ECD523AB6B7200F49C82 /* ViewController.swift in Sources */,
 				3585ECD123AB6B7200F49C82 /* AppDelegate.swift in Sources */,
 				3585ECD323AB6B7200F49C82 /* SceneDelegate.swift in Sources */,
+				DDE9E00E299291D800A6C5A3 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
