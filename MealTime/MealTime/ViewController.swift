@@ -5,6 +5,7 @@
 //  Created by Artem Androsenko on 07.02.2023.
 //
 
+
 import UIKit
 import CoreData
 
@@ -46,12 +47,12 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
         
         let date = array[indexPath.row]
         
-        cell!.textLabel!.text = dateFormatter.string(from: date)
-        return cell!
+        cell.textLabel!.text = dateFormatter.string(from: date)
+        return cell
     }
 }
 

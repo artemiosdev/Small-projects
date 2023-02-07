@@ -3,7 +3,6 @@
 //  MealTime
 //
 //  Created by Artem Androsenko on 07.02.2023.
-//  Copyright © 2023 Ivan Akulov. All rights reserved.
 //
 
 import Foundation
@@ -54,3 +53,4 @@ class CoreDataStack {
         }
     }
 }
+
