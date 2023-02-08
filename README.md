@@ -1,5 +1,63 @@
 Примеры маленьких приложений, с целью знакомства и изучения различного функционала. В каждом из них есть готовые шаблоны/примеры использования. Ниже описание:
 
+
+
+
+
+---
+
+---
+
+---
+### [MyCars](https://github.com/artemiosdev/Small-projects/tree/main/MyCars/MyCars)
+- [#CoreData](https://developer.apple.com/documentation/coredata) – нативный фреймворк от Apple для хранения данных пользователя у него на устройстве. Это не база данных
+- [Core Data Stack](https://developer.apple.com/documentation/coredata/core_data_stack) - manage and persist your app’s model layer.
+    - Экземпляр #NSManagedObjectModel описывает типы вашего приложения, включая их свойства и взаимосвязи.
+    - Экземпляр #NSManagedObjectContext отслеживает изменения в экземплярах типов вашего приложения.
+    - Экземпляр #NSPersistentStoreCoordinator сохраняет и извлекает экземпляры типов вашего приложения из хранилищ.
+
+- [Generating Code](https://developer.apple.com/documentation/coredata/modeling_data/generating_code ) автоматически или вручную создавайте подклассы управляемых объектов из сущностей (entities).
+    - Class #Definition – класс будет существовать в системе, к нему нет прямого доступа из Navigator, не виден в Xcode.
+    - #Manual/None – полный ручной контроль над классом, можно добавить свою логику. Нужно вручную добавить. Class будет в проекте.
+    - #Category/Extension – только Extension
+
+- [#CoreDataStack](https://developer.apple.com/documentation/coredata/core_data_stack) – механизм внутри фреймворка Core Data, который позволяет хранить данные на постоянной основе. Persistent Store – постоянное хранилище информации. Весь механизм внутри Persistent Container. И состоит из 3 основных классов с которыми мы сталкиваемся: 
+    - Managed Object Context – это наш контекст который нужно сохранить, это изменения. 
+    - Persistent Store Coordinator – определяет на основек какой модели (Managed Object Model) мы будем хранить данные 
+    - Managed Object Model - сама модель
+
+<img alt="image" src="images/СoreDataStack1.jpg"/>
+
+<img alt="image" src="images/coredata.jpg"/>
+
+<img alt="image" src="images/coredata1.jpg"/>
+
+- [DateFormatter](https://developer.apple.com/documentation/foundation/dateformatter) - A formatter that converts between dates and their textual representations
+- [UISegmentedControl](https://developer.apple.com/documentation/uikit/uisegmentedcontrol)
+- Сохранение `context.save()` в CoreData
+- [NSFetchRequest](https://developer.apple.com/documentation/coredata/nsfetchrequest) - A description of search criteria used to retrieve data from a persistent store.
+- [UIAlertController](https://developer.apple.com/documentation/uikit/uialertcontroller) и [UIAlertAction](https://developer.apple.com/documentation/uikit/uialertaction) 
+- [NSError](https://developer.apple.com/documentation/foundation/nserror) - Information about an error condition including a domain, a domain-specific error code, and application-specific information
+- [NSPredicate](https://developer.apple.com/documentation/foundation/nspredicate) - A definition of logical conditions for constraining a search for a fetch or for in-memory filtering.
+- [Class Bundle](https://developer.apple.com/documentation/foundation/bundle) - A representation of the code and resources stored in a bundle directory on disk.
+
+<img alt="image" src="images/MyCars.gif"  height = 510 width = 233/>
+
+---
+### [MealTime](https://github.com/artemiosdev/Small-projects/tree/main/MealTime/MealTime)
+
+<img alt="image" src="images/MealTime.gif"  height = 510 width = 233/>
+
+
+---
+### [ToDoList](https://github.com/artemiosdev/Small-projects/tree/main/ToDoList/ToDoList)
+
+<img alt="image" src="images/ToDoList.gif"  height = 510 width = 233/>
+
+---
+
+---
+
 ---
 ### [PhotoTapps](https://github.com/artemiosdev/Small-projects/tree/main/PhotoTapps/PhotoTapps)
 Простое приложение построенное на CollectionViewController.
