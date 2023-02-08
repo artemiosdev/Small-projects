@@ -7,24 +7,24 @@
 ---
 
 ---
-
+### CoreData
 ---
 ### [MyCars](https://github.com/artemiosdev/Small-projects/tree/main/MyCars/MyCars)
 - [#CoreData](https://developer.apple.com/documentation/coredata) – нативный фреймворк от Apple для хранения данных пользователя у него на устройстве. Это не база данных
 - [Core Data Stack](https://developer.apple.com/documentation/coredata/core_data_stack) - manage and persist your app’s model layer.
-    - Экземпляр #NSManagedObjectModel описывает типы вашего приложения, включая их свойства и взаимосвязи.
-    - Экземпляр #NSManagedObjectContext отслеживает изменения в экземплярах типов вашего приложения.
-    - Экземпляр #NSPersistentStoreCoordinator сохраняет и извлекает экземпляры типов вашего приложения из хранилищ.
+    - Экземпляр **#NSManagedObjectModel** описывает типы вашего приложения, включая их свойства и взаимосвязи.
+    - Экземпляр **#NSManagedObjectContext** отслеживает изменения в экземплярах типов вашего приложения.
+    - Экземпляр **#NSPersistentStoreCoordinator** сохраняет и извлекает экземпляры типов вашего приложения из хранилищ.
 
 - [Generating Code](https://developer.apple.com/documentation/coredata/modeling_data/generating_code ) автоматически или вручную создавайте подклассы управляемых объектов из сущностей (entities).
-    - Class #Definition – класс будет существовать в системе, к нему нет прямого доступа из Navigator, не виден в Xcode.
-    - #Manual/None – полный ручной контроль над классом, можно добавить свою логику. Нужно вручную добавить. Class будет в проекте.
-    - #Category/Extension – только Extension
+    - **Class #Definition** – класс будет существовать в системе, к нему нет прямого доступа из Navigator, не виден в Xcode.
+    - **#Manual/None** – полный ручной контроль над классом, можно добавить свою логику. Нужно вручную добавить. Class будет в проекте.
+    - **#Category/Extension** – только Extension
 
 - [#CoreDataStack](https://developer.apple.com/documentation/coredata/core_data_stack) – механизм внутри фреймворка Core Data, который позволяет хранить данные на постоянной основе. Persistent Store – постоянное хранилище информации. Весь механизм внутри Persistent Container. И состоит из 3 основных классов с которыми мы сталкиваемся: 
-    - Managed Object Context – это наш контекст который нужно сохранить, это изменения. 
-    - Persistent Store Coordinator – определяет на основек какой модели (Managed Object Model) мы будем хранить данные 
-    - Managed Object Model - сама модель
+    - **Managed Object Context** – это наш контекст который нужно сохранить, это изменения. 
+    - **Persistent Store Coordinator** – определяет на основек какой модели (Managed Object Model) мы будем хранить данные 
+    - **Managed Object Model** - сама модель
 
 <img alt="image" src="images/СoreDataStack1.jpg"/>
 
@@ -38,23 +38,35 @@
 - [NSFetchRequest](https://developer.apple.com/documentation/coredata/nsfetchrequest) - A description of search criteria used to retrieve data from a persistent store.
 - [UIAlertController](https://developer.apple.com/documentation/uikit/uialertcontroller) и [UIAlertAction](https://developer.apple.com/documentation/uikit/uialertaction) 
 - [NSError](https://developer.apple.com/documentation/foundation/nserror) - Information about an error condition including a domain, a domain-specific error code, and application-specific information
-- [NSPredicate](https://developer.apple.com/documentation/foundation/nspredicate) - A definition of logical conditions for constraining a search for a fetch or for in-memory filtering.
-- [Class Bundle](https://developer.apple.com/documentation/foundation/bundle) - A representation of the code and resources stored in a bundle directory on disk.
+- [NSPredicate](https://developer.apple.com/documentation/foundation/nspredicate) - Определение логических условий для ограничения поиска для выборки или для фильтрации в памяти. `@"attributeName == %@"`
+    - [#Predicate Programming Guide](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/Predicates/AdditionalChapters/Introduction.html#//apple_ref/doc/uid/TP40001789)
+    - [#Create predicate](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/Predicates/Articles/pCreating.html#//apple_ref/doc/uid/TP40001793-CJBDBHCB)
+
+- [Class Bundle](https://developer.apple.com/documentation/foundation/bundle) - Представление кода и ресурсов, хранящихся в каталоге пакета на диске. Используя объект bundle, вы можете получить доступ к ресурсам bundle, не зная структуры bundle. Общая схема использования объекта bundle выглядит следующим образом: Создайте объект bundle для предполагаемого каталога bundle. Используйте методы объекта bundle, чтобы найти или загрузить необходимый ресурс.
 
 <img alt="image" src="images/MyCars.gif"  height = 510 width = 233/>
 
 ---
 ### [MealTime](https://github.com/artemiosdev/Small-projects/tree/main/MealTime/MealTime)
 
-<img alt="image" src="images/MealTime.gif"  height = 510 width = 233/>
+- CoreData Entities Manual/None, классы сущностей в проекте 
+- [Class NSManagedObject](https://developer.apple.com/documentation/coredata/nsmanagedobject) - A base class that implements the behavior for a Core Data model object
+- [Class NSPersistentContainer](https://developer.apple.com/documentation/coredata/nspersistentcontainer) - A container that encapsulates the Core Data stack in your app.
+- CoreDate код вынесен отдельно в класс CoreDataStack
+- Сохранение `context.save()` и удаление `context.delete(...)` данных CoreData
 
+<img alt="image" src="images/MealTime.gif"  height = 510 width = 233/>
 
 ---
 ### [ToDoList](https://github.com/artemiosdev/Small-projects/tree/main/ToDoList/ToDoList)
 
+- Сохранение `context.save()` и удаление `context.delete(...)` данных CoreData
+- [#viewWillAppear(_:)](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621510-viewwillappear) - метод вызывается до того, как представление контроллера представления будет добавлено в иерархию представлений, и до того, как будут настроены какие-либо анимации для отображения представления. Вы можете переопределить этот метод для выполнения пользовательских задач, связанных с отображением представления. Например, вы можете использовать этот метод для изменения ориентации или стиля строки состояния в соответствии с ориентацией или стилем представляемого представления. Если вы переопределяете этот метод, вы должны вызвать super в какой-то момент вашей реализации.
+
 <img alt="image" src="images/ToDoList.gif"  height = 510 width = 233/>
 
 ---
+CoreData end
 
 ---
 
