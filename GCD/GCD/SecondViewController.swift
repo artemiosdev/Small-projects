@@ -34,8 +34,16 @@ class SecondViewController: UIViewController {
         imageURL = URL(string: "https://devimages-cdn.apple.com/wwdc-services/articles/images/EF21786B-1543-4CB9-9B70-6C617220EB16/2048.jpeg")
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
-        guard let url = imageURL, let imageData = try? Data(contentsOf: url) else { return }
-        self.image = UIImage(data: imageData)
+        
+        // создадим очередь
+        let queue = DispatchQueue.global(qos: .utility)
+        queue.async {
+            guard let url = self.imageURL, let imageData = try? Data(contentsOf: url) else { return }
+            // НО обновление UI должно быть всегда в основном потоке
+            DispatchQueue.main.async {
+                self.image = UIImage(data: imageData)
+            }
+        }
         
     }
     
