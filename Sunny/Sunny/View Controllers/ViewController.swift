@@ -21,7 +21,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let urlString = "https://api.openweathermap.org/data/2.5/weather?q=London&appid=c9ebc7e075494ad023179250421fe8dd&units=metric"
+        let url = URL(string: urlString)
+        let session = URLSession(configuration: .default)
+        let task = session.dataTask(with: url!) { data, response, error in
+            if let data = data {
+                let dataString = String(data: data, encoding: .utf8)
+                print(dataString!)
+            }
+        }
+        // для запрос осуществился вызываем
+        task.resume()
     }
 }
 
