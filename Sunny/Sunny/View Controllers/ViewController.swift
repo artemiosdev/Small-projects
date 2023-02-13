@@ -14,24 +14,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var feelsLikeTemperatureLabel: UILabel!
     
+    let networkWeatherManager = NetworkWeatherManager()
     
     @IBAction func searchPressed(_ sender: UIButton) {
-        self.presentSearchAlertController(withTitle: "Enter city name", message: nil, style: .alert)
+        self.presentSearchAlertController(withTitle: "Enter city name", message: nil, style: .alert) { city in
+            self.networkWeatherManager.fetchCurrentWeather(forCity: city)
+            
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let urlString = "https://api.openweathermap.org/data/2.5/weather?q=London&appid=c9ebc7e075494ad023179250421fe8dd&units=metric"
-        let url = URL(string: urlString)
-        let session = URLSession(configuration: .default)
-        let task = session.dataTask(with: url!) { data, response, error in
-            if let data = data {
-                let dataString = String(data: data, encoding: .utf8)
-                print(dataString!)
-            }
-        }
-        // для запрос осуществился вызываем
-        task.resume()
+        networkWeatherManager.fetchCurrentWeather(forCity: "Moscow")
     }
 }
 
