@@ -21,7 +21,7 @@ class ViewController: UIViewController {
             self.networkWeatherManager.fetchCurrentWeather(forCity: city)
             
         }
-    }
+    } 
     
     override func viewDidLoad() {
         super.viewDidLoad()
