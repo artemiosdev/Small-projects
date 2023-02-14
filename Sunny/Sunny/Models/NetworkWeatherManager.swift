@@ -8,14 +8,12 @@
 
 import Foundation
 
-protocol NetworkWeatherManagerDelegate: class {
-    func updateInterface(_: NetworkWeatherManager, with currentWeather: CurrentWeather)
-}
-
 // предоставление данных для обновления UI
 class NetworkWeatherManager {
     
-    weak var delegate: NetworkWeatherManagerDelegate?
+    // создадим дополнительный complitionHandler
+    // чтобы по сути подписаться под изменения нашего currentWeather
+    var onCompletion: ((CurrentWeather) -> Void)?
     
     func fetchCurrentWeather(forCity city: String) {
         let urlString = "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=\(apiKey)&units=metric"
@@ -24,8 +22,7 @@ class NetworkWeatherManager {
         let task = session.dataTask(with: url) { data, response, error in
             if let data = data {
                 if let currentWeather = self.parseJSON(withData: data) {
-                    // delegate обновляет свой интерфейс
-                    self.delegate?.updateInterface(self, with: currentWeather)
+                    self.onCompletion?(currentWeather)
                 }
             }
         }
