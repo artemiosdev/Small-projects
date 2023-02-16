@@ -22,7 +22,7 @@ class NetworkWeatherManager {
         case coordinate(latitude: CLLocationDegrees, longitude: CLLocationDegrees)
     }
     
-    // универсальный метод под 2 вариант, это с city и coordinate
+    // универсальный метод под 2 вариант, с city и coordinate
     func fetchCurrentWeather(forRequestType requestType: RequestType) {
         var urlString = ""
         switch requestType {
@@ -33,17 +33,6 @@ class NetworkWeatherManager {
         }
         performRequest(withURLString: urlString)
     }
-    
-    //    func fetchCurrentWeather(forCity city: String) {
-    //        let urlString = "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=\(apiKey)&units=metric"
-    //        performRequest(withURLString: urlString)
-    //    }
-    //
-    //    // для отображения погоды по геопозиции пользователя
-    //    fileprivate func fetchCurrentWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
-    //        let urlString = "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=\(apiKey)&units=metric"
-    //        performRequest(withURLString: urlString)
-    //    }
     
     // напишем для наших методом func fetchCurrentWeather получение URL
     func performRequest(withURLString urlString: String) {

@@ -14,12 +14,12 @@ struct CurrentWeather {
     var temperatureString: String {
         // отобразим число, без знаков после запятой
         return String(format: "%.0f", temperature)
-//        return "\(temperature.rounded())"
+        //        return "\(temperature.rounded())"
     }
     let fellsLikeTemperature: Double
     var fellsLikeTemperatureString: String {
         return String(format: "%.0f", fellsLikeTemperature)
-//        return "\(temperature.rounded())"
+        //        return "\(temperature.rounded())"
     }
     
     let conditionCode: Int
