@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD5A9C60299FB7DB00CE9CCC /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5A9C5F299FB7DB00CE9CCC /* TasksViewController.swift */; };
 		DDA082CF299E38A700B5568F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA082CE299E38A700B5568F /* AppDelegate.swift */; };
 		DDA082D1299E38A700B5568F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA082D0299E38A700B5568F /* SceneDelegate.swift */; };
-		DDA082D3299E38A700B5568F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA082D2299E38A700B5568F /* ViewController.swift */; };
+		DDA082D3299E38A700B5568F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA082D2299E38A700B5568F /* LoginViewController.swift */; };
 		DDA082D6299E38A700B5568F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA082D4299E38A700B5568F /* Main.storyboard */; };
 		DDA082D8299E38A800B5568F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDA082D7299E38A800B5568F /* Assets.xcassets */; };
 		DDA082DB299E38A800B5568F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA082D9299E38A800B5568F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD5A9C5F299FB7DB00CE9CCC /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		DDA082CB299E38A700B5568F /* ToDoFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDA082CE299E38A700B5568F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDA082D0299E38A700B5568F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DDA082D2299E38A700B5568F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DDA082D2299E38A700B5568F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DDA082D5299E38A700B5568F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDA082D7299E38A800B5568F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDA082DA299E38A800B5568F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +39,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD5A9C61299FB83000CE9CCC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DDA082D2299E38A700B5568F /* LoginViewController.swift */,
+				DD5A9C5F299FB7DB00CE9CCC /* TasksViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DD5A9C62299FB84B00CE9CCC /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				DDA082CE299E38A700B5568F /* AppDelegate.swift */,
+				DDA082D0299E38A700B5568F /* SceneDelegate.swift */,
+				DDA082D4299E38A700B5568F /* Main.storyboard */,
+				DDA082D7299E38A800B5568F /* Assets.xcassets */,
+				DDA082D9299E38A800B5568F /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
 		DDA082C2299E38A700B5568F = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +79,8 @@
 		DDA082CD299E38A700B5568F /* ToDoFirebase */ = {
 			isa = PBXGroup;
 			children = (
-				DDA082CE299E38A700B5568F /* AppDelegate.swift */,
-				DDA082D0299E38A700B5568F /* SceneDelegate.swift */,
-				DDA082D2299E38A700B5568F /* ViewController.swift */,
-				DDA082D4299E38A700B5568F /* Main.storyboard */,
-				DDA082D7299E38A800B5568F /* Assets.xcassets */,
-				DDA082D9299E38A800B5568F /* LaunchScreen.storyboard */,
+				DD5A9C61299FB83000CE9CCC /* Controllers */,
+				DD5A9C62299FB84B00CE9CCC /* Supporting files */,
 				DDA082DC299E38A800B5568F /* Info.plist */,
 			);
 			path = ToDoFirebase;
@@ -138,7 +157,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDA082D3299E38A700B5568F /* ViewController.swift in Sources */,
+				DDA082D3299E38A700B5568F /* LoginViewController.swift in Sources */,
+				DD5A9C60299FB7DB00CE9CCC /* TasksViewController.swift in Sources */,
 				DDA082CF299E38A700B5568F /* AppDelegate.swift in Sources */,
 				DDA082D1299E38A700B5568F /* SceneDelegate.swift in Sources */,
 			);
