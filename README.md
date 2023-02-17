@@ -1,10 +1,28 @@
 Примеры маленьких приложений, с целью знакомства и изучения различного функционала. В каждом из них есть готовые шаблоны/примеры использования. Ниже описание:
 
 
+---
+### [Sunny](https://github.com/artemiosdev/Small-projects/tree/main/Sunny/Sunny)
 
+- Работа  про API и JSON, [подробнее здесь](https://github.com/artemiosdev/Swift-Manual-my-notes/blob/main/READMEpart3.md#api)
+- Чтобы распарсить JSON на нужную модель [quicktype](https://app.quicktype.io/)
+- Используется доступный погодный api [Open Weather](https://openweathermap.org/current)
+- Protocol [Codable](https://developer.apple.com/documentation/swift/codable) включающий в себя протоколы `#Decodable` (раскодировать) и `#Encodable` (закодировать)
+- Передача данных через `closure` (вариант с `delegation` в конспекте описан)
+- Создаем универсальный запрос с помощью enum в функцию с выбором нужного варианта подстановки с помощью switch (имя города или координаты геопозиции пользователя)
+- Используются "[Списки захвата в Swift: в чём разница между ссылками weak, strong и unowned?](https://habr.com/ru/post/444336/)"
+- [CoreLocation](https://developer.apple.com/documentation/corelocation) 
+    - class [CLLocationManager](https://developer.apple.com/documentation/corelocation/cllocationmanager) для настройки, запуска и остановки основных служб определения местоположения
+    - [CLLocationManagerDelegate](https://developer.apple.com/documentation/corelocation/cllocationmanagerdelegate) - методы, для получения событий от связанного объекта location-manager.
 
+<img alt="image" src="images/Sunny.gif"  height = 510 width = 233/>
 
 ---
+### [GCD (Grand Central Dispatch)](https://github.com/artemiosdev/Small-projects/tree/main/GCD)
+
+Многопоточность, #multithreading, [подробнее здесь](https://github.com/artemiosdev/Swift-Manual-my-notes/blob/main/READMEpart3.md#gcd)
+
+[DispatchQueue](https://developer.apple.com/documentation/dispatch/dispatchqueue) - oбъект, который управляет выполнением задач последовательно или одновременно в основном потоке вашего приложения или в фоновом потоке.
 
 ---
 ### CoreData
