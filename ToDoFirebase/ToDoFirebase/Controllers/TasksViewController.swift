@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -23,14 +24,26 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
     }
-
+    
     @IBAction func addTapped(_ sender: UIBarButtonItem) {
+        
+    }
+    
+    // выход из профиля
+    @IBAction func signOutTapped(_ sender: UIBarButtonItem) {
+        do {
+            try Auth.auth().signOut()
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
+        // выходим на LoginView
+        dismiss(animated: true, completion: nil)
     }
     
 }

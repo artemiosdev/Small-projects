@@ -73,7 +73,6 @@
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zx2-Ki-LAn"/>
-                                                    <segue destination="u8O-Q6-3lj" kind="show" identifier="tasksSegue" id="AQK-BF-SI7"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vB9-pd-wYM">
@@ -117,6 +116,7 @@
                         <outlet property="emailTextField" destination="A1c-Xp-E46" id="nzd-RO-qAD"/>
                         <outlet property="passwordTextField" destination="cgQ-Zu-I1q" id="Dba-3g-5SN"/>
                         <outlet property="warnLabel" destination="mjv-T1-cly" id="tPU-Fx-bQr"/>
+                        <segue destination="u8O-Q6-3lj" kind="show" identifier="tasksSegue" id="2GD-Ip-9F5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -159,6 +159,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tasks" id="OYm-9L-iLn">
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="Hbh-wV-wLG">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="signOutTapped:" destination="aJf-0w-JX6" id="Fya-se-RTE"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="uIf-Iz-sOs">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
