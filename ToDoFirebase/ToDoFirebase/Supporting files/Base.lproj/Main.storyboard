@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,12 +11,16 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="ToDoFirebase" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cR9-RG-0KR"/>
+                        <viewControllerLayoutGuide type="bottom" id="92C-6G-icj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIScrollView">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="bGl-c9-CSi">
-                                <rect key="frame" x="40" y="212" width="310" height="430"/>
+                                <rect key="frame" x="40" y="207" width="310" height="430"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="8o8-pB-2Ts">
                                         <rect key="frame" x="47.333333333333329" y="0.0" width="215.33333333333337" height="124.66666666666667"/>
@@ -102,13 +105,12 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bGl-c9-CSi" secondAttribute="trailing" constant="40" id="ceh-eR-jkA"/>
-                            <constraint firstItem="bGl-c9-CSi" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="faf-w6-hIw"/>
-                            <constraint firstItem="bGl-c9-CSi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="piV-m2-5oj"/>
-                            <constraint firstItem="bGl-c9-CSi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="vBc-5B-zHG"/>
+                            <constraint firstAttribute="trailing" secondItem="bGl-c9-CSi" secondAttribute="trailing" constant="40" id="ceh-eR-jkA"/>
+                            <constraint firstItem="bGl-c9-CSi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="faf-w6-hIw"/>
+                            <constraint firstItem="bGl-c9-CSi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="piV-m2-5oj"/>
+                            <constraint firstItem="bGl-c9-CSi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="vBc-5B-zHG"/>
                         </constraints>
                     </view>
                     <connections>
@@ -125,6 +127,10 @@
         <scene sceneID="KqD-91-j3k">
             <objects>
                 <viewController id="aJf-0w-JX6" customClass="TasksViewController" customModule="ToDoFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ExJ-zv-Sil"/>
+                        <viewControllerLayoutGuide type="bottom" id="D0o-GK-bPh"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sgV-9a-Yw9">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -150,7 +156,6 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="dDW-fU-r40"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tasks" id="OYm-9L-iLn">
