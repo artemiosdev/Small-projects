@@ -4,6 +4,15 @@
 
 GoogleService-Info.plist
 
+### Firebase ###
+.idea
+**/node_modules/*
+**/.firebaserc
+
+### Firebase Patch ###
+.runtimeconfig.json
+.firebase/
+
 *~
 .*.swp
 .DS_Store
@@ -93,4 +102,4 @@ fastlane/test_output
 # After new code Injection tools there's a generated folder /iOSInjectionProject
 # https://github.com/johnno1962/injectionforxcode
 
-iOSInjectionProject/
+iOSInjectionProject/GoogleService-Info.plist
