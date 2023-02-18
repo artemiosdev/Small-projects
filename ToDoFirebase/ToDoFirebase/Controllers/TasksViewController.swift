@@ -32,7 +32,25 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     @IBAction func addTapped(_ sender: UIBarButtonItem) {
+        let alertController = UIAlertController(title: "New Task", message: "Add new task", preferredStyle: .alert)
+        alertController.addTextField()
+        let save = UIAlertAction(title: "Save", style: .default) { _ in
+            
+            guard let textField = alertController.textFields?.first, textField.text != "" else {
+                // добавим alert сообщающий пользователю о необходимости ввести данные в поле
+                let errorAlertController = UIAlertController(title: "Error", message: "The task should not be empty", preferredStyle: .alert)
+                let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+                errorAlertController.addAction(cancel)
+                self.present(errorAlertController, animated: true, completion: nil)
+                return
+            }
+        }
         
+        let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        alertController.addAction(save)
+        alertController.addAction(cancel)
+        
+        present(alertController, animated: true, completion: nil)
     }
     
     // выход из профиля
