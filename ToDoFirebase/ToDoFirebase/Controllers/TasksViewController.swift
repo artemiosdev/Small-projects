@@ -10,6 +10,11 @@ import Firebase
 
 class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var user: User!
+    var ref: DatabaseReference!
+    var tasks = Array<Task>()
+    
+    
     @IBOutlet weak var tableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,22 +33,30 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        // создадим пользователя user
+        guard let currentUser = Auth.auth().currentUser else { return }
+        user = User(user: currentUser)
+        // добираемся до конкретного пользователя и его задач
+        ref = Database.database().reference(withPath: "users").child(String(user.uid)).child("tasks")
     }
     
     @IBAction func addTapped(_ sender: UIBarButtonItem) {
         let alertController = UIAlertController(title: "New Task", message: "Add new task", preferredStyle: .alert)
         alertController.addTextField()
-        let save = UIAlertAction(title: "Save", style: .default) { _ in
+        let save = UIAlertAction(title: "Save", style: .default) { [weak self] _ in
             
             guard let textField = alertController.textFields?.first, textField.text != "" else {
                 // добавим alert сообщающий пользователю о необходимости ввести данные в поле
                 let errorAlertController = UIAlertController(title: "Error", message: "The task should not be empty", preferredStyle: .alert)
                 let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
                 errorAlertController.addAction(cancel)
-                self.present(errorAlertController, animated: true, completion: nil)
+                self?.present(errorAlertController, animated: true, completion: nil)
                 return
             }
+            
+            // создадим задачу
+            let task = Task(title: textField.text!, userId: (self?.user.uid)!)
+            let taskRef = self?.ref.child(task.title.lowercased())
         }
         
         let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
