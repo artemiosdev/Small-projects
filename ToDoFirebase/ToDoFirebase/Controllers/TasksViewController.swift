@@ -7,7 +7,6 @@
 
 import UIKit
 import Firebase
-// text commit
 
 class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     

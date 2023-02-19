@@ -14,6 +14,8 @@
 		DDA082D6299E38A700B5568F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA082D4299E38A700B5568F /* Main.storyboard */; };
 		DDA082D8299E38A800B5568F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDA082D7299E38A800B5568F /* Assets.xcassets */; };
 		DDA082DB299E38A800B5568F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA082D9299E38A800B5568F /* LaunchScreen.storyboard */; };
+		DDB4414A29A248AD00D73D36 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB4414929A248AD00D73D36 /* Task.swift */; };
+		DDB4414C29A248C900D73D36 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB4414B29A248C900D73D36 /* User.swift */; };
 		DDED1A1F29A005BB003986A7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDED1A1E29A005BB003986A7 /* GoogleService-Info.plist */; };
 		DDED1A2229A0098F003986A7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DDED1A2129A0098F003986A7 /* FirebaseAuth */; };
 		DDED1A2429A0098F003986A7 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = DDED1A2329A0098F003986A7 /* FirebaseDatabase */; };
@@ -31,6 +33,8 @@
 		DDA082D7299E38A800B5568F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDA082DA299E38A800B5568F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDA082DC299E38A800B5568F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDB4414929A248AD00D73D36 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		DDB4414B29A248C900D73D36 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DDED1A1E29A005BB003986A7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,10 +95,20 @@
 			isa = PBXGroup;
 			children = (
 				DD5A9C61299FB83000CE9CCC /* Controllers */,
+				DDB4414D29A249C500D73D36 /* Models */,
 				DD5A9C62299FB84B00CE9CCC /* Supporting files */,
 				DDA082DC299E38A800B5568F /* Info.plist */,
 			);
 			path = ToDoFirebase;
+			sourceTree = "<group>";
+		};
+		DDB4414D29A249C500D73D36 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DDB4414929A248AD00D73D36 /* Task.swift */,
+				DDB4414B29A248C900D73D36 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +194,8 @@
 			files = (
 				DDA082D3299E38A700B5568F /* LoginViewController.swift in Sources */,
 				DD5A9C60299FB7DB00CE9CCC /* TasksViewController.swift in Sources */,
+				DDB4414C29A248C900D73D36 /* User.swift in Sources */,
+				DDB4414A29A248AD00D73D36 /* Task.swift in Sources */,
 				DDA082CF299E38A700B5568F /* AppDelegate.swift in Sources */,
 				DDA082D1299E38A700B5568F /* SceneDelegate.swift in Sources */,
 			);
