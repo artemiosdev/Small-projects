@@ -57,6 +57,8 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
             // создадим задачу
             let task = Task(title: textField.text!, userId: (self?.user.uid)!)
             let taskRef = self?.ref.child(task.title.lowercased())
+            // поместим task по адресу taskRef
+            taskRef?.setValue(task.convertToDictionary())
         }
         
         let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
