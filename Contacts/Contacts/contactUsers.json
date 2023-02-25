@@ -1,0 +1,44 @@
+[
+    {
+        "fullname": "Peter Brown",
+        "imageString": "human6",
+        "firstCharacter": "P",
+        "id": 6
+    },
+    {
+        "fullname": "Sarah White",
+        "imageString": "human7",
+        "firstCharacter": "S",
+        "id": 7
+    },
+    {
+        "fullname": "Melven Sandro",
+        "imageString": "human8",
+        "firstCharacter": "M",
+        "id": 8
+    },
+    {
+        "fullname": "Nike Rose",
+        "imageString": "human9",
+        "firstCharacter": "N",
+        "id": 9
+    },
+    {
+        "fullname": "Andrey Velvet",
+        "imageString": "human10",
+        "firstCharacter": "A",
+        "id": 10
+    },
+    {
+        "fullname": "Alexey Tarasov",
+        "imageString": "human6",
+        "firstCharacter": "A",
+        "id": 11
+    },
+    {
+        "fullname": "Alexandr Moroz",
+        "imageString": "human3",
+        "firstCharacter": "A",
+        "id": 12
+    }
+]

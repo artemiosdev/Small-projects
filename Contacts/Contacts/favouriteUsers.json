@@ -1,0 +1,33 @@
+[
+    {
+        "fullname": "Bob River",
+        "imageString": "human1",
+        "firstCharacter": "B",
+        "id": 1
+    },
+    {
+        "fullname": "John Black",
+        "imageString": "human2",
+        "firstCharacter": "J",
+        "id": 2
+    },
+    {
+        "fullname": "Misha Red",
+        "imageString": "human3",
+        "firstCharacter": "M",
+        "id": 3
+    },
+    {
+        "fullname": "Alex Film",
+        "imageString": "human4",
+        "firstCharacter": "A",
+        "id": 4
+    },
+    {
+        "fullname": "Robert Martin",
+        "imageString": "human5",
+        "firstCharacter": "R",
+        "id": 5
+    }
+]
+
