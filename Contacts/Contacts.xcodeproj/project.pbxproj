@@ -16,6 +16,13 @@
 		DD9AC10929AA7D03008C8FEC /* favouriteUsers.json in Resources */ = {isa = PBXBuildFile; fileRef = DD9AC10829AA7D03008C8FEC /* favouriteUsers.json */; };
 		DD9AC10B29AA7EC4008C8FEC /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9AC10A29AA7EC4008C8FEC /* MainTabBarController.swift */; };
 		DD9AC10D29AA827F008C8FEC /* RecentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9AC10C29AA827F008C8FEC /* RecentViewController.swift */; };
+		DDD6A65C29ABA25800471385 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD6A65B29ABA25800471385 /* ProfileCell.swift */; };
+		DDD6A65E29ABA46D00471385 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD6A65D29ABA46D00471385 /* UserModel.swift */; };
+		DDD6A66029ABA4B400471385 /* SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD6A65F29ABA4B400471385 /* SelfConfiguringCell.swift */; };
+		DDD6A66629ABA5AF00471385 /* Bundle + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD6A66529ABA5AF00471385 /* Bundle + Extension.swift */; };
+		DDD6A66929ABA67A00471385 /* FavouriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD6A66829ABA67A00471385 /* FavouriteCell.swift */; };
+		DDD6A66B29ABA68F00471385 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD6A66A29ABA68F00471385 /* ContactCell.swift */; };
+		DDD6A66D29ABB2FD00471385 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD6A66C29ABB2FD00471385 /* UIViewController + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +37,13 @@
 		DD9AC10829AA7D03008C8FEC /* favouriteUsers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = favouriteUsers.json; sourceTree = "<group>"; };
 		DD9AC10A29AA7EC4008C8FEC /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		DD9AC10C29AA827F008C8FEC /* RecentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentViewController.swift; sourceTree = "<group>"; };
+		DDD6A65B29ABA25800471385 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		DDD6A65D29ABA46D00471385 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		DDD6A65F29ABA4B400471385 /* SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCell.swift; sourceTree = "<group>"; };
+		DDD6A66529ABA5AF00471385 /* Bundle + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle + Extension.swift"; sourceTree = "<group>"; };
+		DDD6A66829ABA67A00471385 /* FavouriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteCell.swift; sourceTree = "<group>"; };
+		DDD6A66A29ABA68F00471385 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		DDD6A66C29ABB2FD00471385 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +78,11 @@
 			children = (
 				DD9AC0F229AA7C3A008C8FEC /* AppDelegate.swift */,
 				DD9AC0F429AA7C3A008C8FEC /* SceneDelegate.swift */,
-				DD9AC0F629AA7C3A008C8FEC /* ContactsViewController.swift */,
-				DD9AC10A29AA7EC4008C8FEC /* MainTabBarController.swift */,
-				DD9AC10C29AA827F008C8FEC /* RecentViewController.swift */,
+				DDD6A66329ABA53200471385 /* Model */,
+				DDD6A66129ABA51D00471385 /* Controllers */,
+				DDD6A66229ABA52900471385 /* Cell */,
+				DDD6A66429ABA53B00471385 /* Protocols */,
+				DDD6A66729ABA5B500471385 /* Extentions */,
 				DD9AC10629AA7CFB008C8FEC /* contactUsers.json */,
 				DD9AC10829AA7D03008C8FEC /* favouriteUsers.json */,
 				DD9AC0FB29AA7C3C008C8FEC /* Assets.xcassets */,
@@ -74,6 +90,52 @@
 				DD9AC10029AA7C3C008C8FEC /* Info.plist */,
 			);
 			path = Contacts;
+			sourceTree = "<group>";
+		};
+		DDD6A66129ABA51D00471385 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD9AC0F629AA7C3A008C8FEC /* ContactsViewController.swift */,
+				DD9AC10C29AA827F008C8FEC /* RecentViewController.swift */,
+				DD9AC10A29AA7EC4008C8FEC /* MainTabBarController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DDD6A66229ABA52900471385 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DDD6A65B29ABA25800471385 /* ProfileCell.swift */,
+				DDD6A66829ABA67A00471385 /* FavouriteCell.swift */,
+				DDD6A66A29ABA68F00471385 /* ContactCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		DDD6A66329ABA53200471385 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DDD6A65D29ABA46D00471385 /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DDD6A66429ABA53B00471385 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DDD6A65F29ABA4B400471385 /* SelfConfiguringCell.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DDD6A66729ABA5B500471385 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				DDD6A66529ABA5AF00471385 /* Bundle + Extension.swift */,
+				DDD6A66C29ABB2FD00471385 /* UIViewController + Extension.swift */,
+			);
+			name = Extentions;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,9 +212,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD9AC0F729AA7C3A008C8FEC /* ContactsViewController.swift in Sources */,
+				DDD6A66029ABA4B400471385 /* SelfConfiguringCell.swift in Sources */,
+				DDD6A65E29ABA46D00471385 /* UserModel.swift in Sources */,
+				DDD6A66629ABA5AF00471385 /* Bundle + Extension.swift in Sources */,
 				DD9AC10D29AA827F008C8FEC /* RecentViewController.swift in Sources */,
+				DDD6A66929ABA67A00471385 /* FavouriteCell.swift in Sources */,
+				DDD6A66B29ABA68F00471385 /* ContactCell.swift in Sources */,
 				DD9AC0F329AA7C3A008C8FEC /* AppDelegate.swift in Sources */,
+				DDD6A65C29ABA25800471385 /* ProfileCell.swift in Sources */,
 				DD9AC10B29AA7EC4008C8FEC /* MainTabBarController.swift in Sources */,
+				DDD6A66D29ABB2FD00471385 /* UIViewController + Extension.swift in Sources */,
 				DD9AC0F529AA7C3A008C8FEC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
