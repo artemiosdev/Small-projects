@@ -16,7 +16,7 @@ class ProfileCell: UICollectionViewCell, SelfConfiguringCell {
         backgroundColor = .orange
     }
     
-    func configure(with user: User) {
+    func configure(with user: ContactsModel.User) {
         
     }
     
