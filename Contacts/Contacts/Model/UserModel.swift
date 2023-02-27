@@ -2,10 +2,10 @@
 //  UserModel.swift
 //  Contacts
 //
-//  Created by Artem Androsenko on 26.02.2023.
+//  Created by Алексей Пархоменко on 13.06.2020.
+//  Copyright © 2020 Алексей Пархоменко. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class ContactsModel {
@@ -28,7 +28,7 @@ class ContactsModel {
     
     enum SectionType: Int {
         case profile
-        case favoutires
+        case favourites
         case contacts
     }
     
@@ -59,13 +59,13 @@ class ContactsModel {
 extension ContactsModel {
     
     func generateCollections() {
-        let profile = User(fullname: "Artem Androsenko", imageString: "human1", firstCharacter: "A", id: 20)
+        let profile = User(fullname: "Alexey Parkhomenko", imageString: "human1", firstCharacter: "A", id: 20)
         let favouriteUsers = Bundle.main.decode([User].self, from: "favouriteUsers.json")
         let contactUsers = Bundle.main.decode([User].self, from: "contactUsers.json")
         
         _collection = [
             UserCollection(type: .profile, header: nil, users: [profile]),
-            UserCollection(type: .favoutires, header: nil, users: favouriteUsers)
+            UserCollection(type: .favourites, header: nil, users: favouriteUsers)
         ]
         
         var dict: [String: [User]] = [:]
@@ -84,4 +84,5 @@ extension ContactsModel {
         }
     }
 }
+
 

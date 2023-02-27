@@ -19,8 +19,8 @@ class SectionHeader: UICollectionReusableView {
         
         backgroundColor = .systemGroupedBackground
         
-//        titleLabel.font = UIFont.sfProRounded(ofSize: 18, weight: .semibold)
-//        titleLabel.textColor = #colorLiteral(red: 0.5294117647, green: 0.5450980392, blue: 0.5843137255, alpha: 1)
+        titleLabel.font = UIFont.sfProRounded(ofSize: 18, weight: .semibold)
+        titleLabel.textColor = #colorLiteral(red: 0.5294117647, green: 0.5450980392, blue: 0.5843137255, alpha: 1)
         
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         addSubview(titleLabel)
@@ -41,5 +41,4 @@ class SectionHeader: UICollectionReusableView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }

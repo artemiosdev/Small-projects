@@ -1,15 +1,14 @@
 //
-//  ViewController.swift
+//  ContactsViewController.swift
 //  Contacts
 //
-//  Created by Artem Androsenko on 25.02.2023.
+//  Created by Алексей Пархоменко on 13.06.2020.
+//  Copyright © 2020 Алексей Пархоменко. All rights reserved.
 //
 
 import UIKit
 
 class ContactsViewController: UIViewController {
-    
-    
     
     let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: ContactsViewController.self, action: #selector(addBarButtonItemTapped))
     let groupsBarButtonItem = UIBarButtonItem(title: "Groups", style: .plain, target: ContactsViewController.self, action: #selector(groupsBarButtonItemTapped))
@@ -17,17 +16,22 @@ class ContactsViewController: UIViewController {
     var dataSource: UICollectionViewDiffableDataSource<ContactsModel.UserCollection, ContactsModel.User>! = nil
     var currentSnapshot: NSDiffableDataSourceSnapshot<ContactsModel.UserCollection, ContactsModel.User>! = nil
     var collectionView: UICollectionView!
+    
     let contactsModel = ContactsModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        
+        for family in UIFont.familyNames.sorted() {
+            let names = UIFont.fontNames(forFamilyName: family)
+            print("Family: \(family) Font names: \(names)")
+        }
+        
         setupNavigationBar()
         setupCollectionView()
-        createDataSourse()
+        createDataSource()
         reloadData()
     }
-    
     
     private func setupNavigationBar() {
         let searchController = UISearchController()
@@ -38,12 +42,10 @@ class ContactsViewController: UIViewController {
         searchController.hidesNavigationBarDuringPresentation = false
         // скрыто ли базовое содержимое во время поиска
         searchController.obscuresBackgroundDuringPresentation = false
-        
         searchController.searchBar.delegate = self
         
         navigationItem.leftBarButtonItem = groupsBarButtonItem
         navigationItem.rightBarButtonItem = addBarButtonItem
-        
         // для большого title
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "Contacts"
@@ -51,11 +53,13 @@ class ContactsViewController: UIViewController {
     
     // создаем и настраиваем коллекцию и ячейки
     private func setupCollectionView() {
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UICollectionViewFlowLayout())
-        collectionView.backgroundColor = .white
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createCompositionalLayout())
+        
+        collectionView.backgroundColor = .systemBackground
         view.addSubview(collectionView)
         
         collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.reuseId)
+        
         collectionView.register(ProfileCell.self, forCellWithReuseIdentifier: ProfileCell.reuseId)
         collectionView.register(FavouriteCell.self, forCellWithReuseIdentifier: FavouriteCell.reuseId)
         collectionView.register(ContactCell.self, forCellWithReuseIdentifier: ContactCell.reuseId)
@@ -69,7 +73,7 @@ class ContactsViewController: UIViewController {
             switch type {
             case .profile:
                 return self.createProfile()
-            case .favoutires:
+            case .favourites:
                 return self.createFavourites()
             case .contacts:
                 return self.createContacts()
@@ -82,8 +86,8 @@ class ContactsViewController: UIViewController {
         return layout
     }
     
-    // создадим секцию профиля
     private func createProfile() -> NSCollectionLayoutSection {
+        
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
@@ -107,7 +111,7 @@ class ContactsViewController: UIViewController {
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = 12
         section.contentInsets = NSDirectionalEdgeInsets.init(top: 0, leading: 16, bottom: 0, trailing: 16)
-        // задаем поведение скролинга секции ячеек слева направо
+        // задаем поведение скролинга слева направо для секции ячеек
         section.orthogonalScrollingBehavior = .continuous
         return section
     }
@@ -124,7 +128,6 @@ class ContactsViewController: UIViewController {
         section.interGroupSpacing = 1
         section.contentInsets = NSDirectionalEdgeInsets.init(top: 16, leading: 16, bottom: 0, trailing: 16)
         
-        
         let sectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(25))
         let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: sectionHeaderSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
         section.boundarySupplementaryItems = [sectionHeader]
@@ -133,18 +136,17 @@ class ContactsViewController: UIViewController {
     
     private func reloadData() {
         currentSnapshot = NSDiffableDataSourceSnapshot<ContactsModel.UserCollection, ContactsModel.User>()
+        
         contactsModel.collections.forEach { (collection) in
             currentSnapshot.appendSections([collection])
             currentSnapshot.appendItems(collection.users)
         }
+        
         dataSource.apply(currentSnapshot, animatingDifferences: true)
     }
     
-    // MARK: DataSourse
-    func createDataSourse() {
-        //        dataSource = UICollectionViewDiffableDataSource<ContactsModel.UserCollection, ContactsModel.User>(collectionView: collectionView, cellProvider: { collectionView, indexPath, user in
-        //            let type = self.currentSnapshot.sectionIdentifiers[indexPath.section].type
-        
+    // MARK: - DataSource
+    func createDataSource() {
         dataSource = UICollectionViewDiffableDataSource<ContactsModel.UserCollection, ContactsModel.User>(collectionView: collectionView, cellProvider: { (collectionView, indexPath, user) -> UICollectionViewCell? in
             var user = user
             
@@ -166,7 +168,7 @@ class ContactsViewController: UIViewController {
             switch type {
             case .profile:
                 return self.configure(collectionView: collectionView, cellType: ProfileCell.self, with: user, for: indexPath)
-            case .favoutires:
+            case .favourites:
                 return self.configure(collectionView: collectionView, cellType: FavouriteCell.self, with: user, for: indexPath)
             case .contacts:
                 return self.configure(collectionView: collectionView, cellType: ContactCell.self, with: user, for: indexPath)
@@ -185,14 +187,13 @@ class ContactsViewController: UIViewController {
                 fatalError("Cannot create new supplementary")
             }
             
-            
         }
     }
 }
 
-// MARK: Actions
+
+// MARK: - Actions
 extension ContactsViewController {
-    
     @objc func addBarButtonItemTapped() {
         print(#function)
     }
@@ -202,9 +203,11 @@ extension ContactsViewController {
     }
 }
 
-// MARK: UISearchBarDelegate
+// MARK: - UISearchBarDelegate
 extension ContactsViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print(searchText)
     }
 }
+
+
