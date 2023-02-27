@@ -16,6 +16,8 @@
 		DD9AC10929AA7D03008C8FEC /* favouriteUsers.json in Resources */ = {isa = PBXBuildFile; fileRef = DD9AC10829AA7D03008C8FEC /* favouriteUsers.json */; };
 		DD9AC10B29AA7EC4008C8FEC /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9AC10A29AA7EC4008C8FEC /* MainTabBarController.swift */; };
 		DD9AC10D29AA827F008C8FEC /* RecentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9AC10C29AA827F008C8FEC /* RecentViewController.swift */; };
+		DDAE447329ACCC98005006ED /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAE447229ACCC98005006ED /* SectionHeader.swift */; };
+		DDAE447529ACD262005006ED /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAE447429ACD262005006ED /* UIView + Extension.swift */; };
 		DDD6A65C29ABA25800471385 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD6A65B29ABA25800471385 /* ProfileCell.swift */; };
 		DDD6A65E29ABA46D00471385 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD6A65D29ABA46D00471385 /* UserModel.swift */; };
 		DDD6A66029ABA4B400471385 /* SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD6A65F29ABA4B400471385 /* SelfConfiguringCell.swift */; };
@@ -37,6 +39,8 @@
 		DD9AC10829AA7D03008C8FEC /* favouriteUsers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = favouriteUsers.json; sourceTree = "<group>"; };
 		DD9AC10A29AA7EC4008C8FEC /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		DD9AC10C29AA827F008C8FEC /* RecentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentViewController.swift; sourceTree = "<group>"; };
+		DDAE447229ACCC98005006ED /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		DDAE447429ACD262005006ED /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		DDD6A65B29ABA25800471385 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		DDD6A65D29ABA46D00471385 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		DDD6A65F29ABA4B400471385 /* SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCell.swift; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 				DD9AC0F629AA7C3A008C8FEC /* ContactsViewController.swift */,
 				DD9AC10C29AA827F008C8FEC /* RecentViewController.swift */,
 				DD9AC10A29AA7EC4008C8FEC /* MainTabBarController.swift */,
+				DDAE447429ACD262005006ED /* UIView + Extension.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -108,6 +113,7 @@
 				DDD6A65B29ABA25800471385 /* ProfileCell.swift */,
 				DDD6A66829ABA67A00471385 /* FavouriteCell.swift */,
 				DDD6A66A29ABA68F00471385 /* ContactCell.swift */,
+				DDAE447229ACCC98005006ED /* SectionHeader.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -215,6 +221,7 @@
 				DDD6A66029ABA4B400471385 /* SelfConfiguringCell.swift in Sources */,
 				DDD6A65E29ABA46D00471385 /* UserModel.swift in Sources */,
 				DDD6A66629ABA5AF00471385 /* Bundle + Extension.swift in Sources */,
+				DDAE447529ACD262005006ED /* UIView + Extension.swift in Sources */,
 				DD9AC10D29AA827F008C8FEC /* RecentViewController.swift in Sources */,
 				DDD6A66929ABA67A00471385 /* FavouriteCell.swift in Sources */,
 				DDD6A66B29ABA68F00471385 /* ContactCell.swift in Sources */,
@@ -223,6 +230,7 @@
 				DD9AC10B29AA7EC4008C8FEC /* MainTabBarController.swift in Sources */,
 				DDD6A66D29ABB2FD00471385 /* UIViewController + Extension.swift in Sources */,
 				DD9AC0F529AA7C3A008C8FEC /* SceneDelegate.swift in Sources */,
+				DDAE447329ACCC98005006ED /* SectionHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

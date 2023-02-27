@@ -52,8 +52,10 @@ class ContactsViewController: UIViewController {
     // создаем и настраиваем коллекцию и ячейки
     private func setupCollectionView() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UICollectionViewFlowLayout())
-        collectionView.backgroundColor = .gray
+        collectionView.backgroundColor = .white
         view.addSubview(collectionView)
+        
+        collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.reuseId)
         collectionView.register(ProfileCell.self, forCellWithReuseIdentifier: ProfileCell.reuseId)
         collectionView.register(FavouriteCell.self, forCellWithReuseIdentifier: FavouriteCell.reuseId)
         collectionView.register(ContactCell.self, forCellWithReuseIdentifier: ContactCell.reuseId)
@@ -61,7 +63,7 @@ class ContactsViewController: UIViewController {
     
     private func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
         let layout = UICollectionViewCompositionalLayout { (sectionIndex, layoutEnvirment) -> NSCollectionLayoutSection? in
-
+            
             let type = self.currentSnapshot.sectionIdentifiers[sectionIndex].type
             
             switch type {
@@ -140,8 +142,27 @@ class ContactsViewController: UIViewController {
     
     // MARK: DataSourse
     func createDataSourse() {
-        dataSource = UICollectionViewDiffableDataSource<ContactsModel.UserCollection, ContactsModel.User>(collectionView: collectionView, cellProvider: { collectionView, indexPath, user in
+        //        dataSource = UICollectionViewDiffableDataSource<ContactsModel.UserCollection, ContactsModel.User>(collectionView: collectionView, cellProvider: { collectionView, indexPath, user in
+        //            let type = self.currentSnapshot.sectionIdentifiers[indexPath.section].type
+        
+        dataSource = UICollectionViewDiffableDataSource<ContactsModel.UserCollection, ContactsModel.User>(collectionView: collectionView, cellProvider: { (collectionView, indexPath, user) -> UICollectionViewCell? in
+            var user = user
+            
             let type = self.currentSnapshot.sectionIdentifiers[indexPath.section].type
+            let users = self.currentSnapshot.sectionIdentifiers[indexPath.section].users
+            
+            if type == .contacts {
+                if users.count > 1, users.first == user {
+                    user.direction = .top
+                } else if users.count == 1 {
+                    user.direction = .all
+                } else if users.last == user {
+                    user.direction = .bottom
+                } else {
+                    user.direction = .nope
+                }
+            }
+            
             switch type {
             case .profile:
                 return self.configure(collectionView: collectionView, cellType: ProfileCell.self, with: user, for: indexPath)
@@ -151,8 +172,22 @@ class ContactsViewController: UIViewController {
                 return self.configure(collectionView: collectionView, cellType: ContactCell.self, with: user, for: indexPath)
             }
         })
+        
+        // настройка SectionHeader, регистрируем и добавляем его в data source
+        dataSource.supplementaryViewProvider = { [weak self] (collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? in
+            guard let self = self, let snapshot = self.currentSnapshot else { return nil }
+            
+            if let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionHeader.reuseId, for: indexPath) as? SectionHeader {
+                let collection = snapshot.sectionIdentifiers[indexPath.section]
+                sectionHeader.titleLabel.text = collection.header
+                return sectionHeader
+            } else {
+                fatalError("Cannot create new supplementary")
+            }
+            
+            
+        }
     }
-    
 }
 
 // MARK: Actions
