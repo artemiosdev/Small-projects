@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AD4BDE4622D878BA005BA4CC /* Quizzler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizzler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD4BDE4622D878BA005BA4CC /* Quizzler-iOS13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quizzler-iOS13.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD4BDE4922D878BA005BA4CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD4BDE4B22D878BA005BA4CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AD4BDE4D22D878BA005BA4CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,7 +44,7 @@
 		AD4BDE3D22D878BA005BA4CC = {
 			isa = PBXGroup;
 			children = (
-				AD4BDE4822D878BA005BA4CC /* Quizzler */,
+				AD4BDE4822D878BA005BA4CC /* Quizzler-iOS13 */,
 				AD4BDE4722D878BA005BA4CC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,12 +52,12 @@
 		AD4BDE4722D878BA005BA4CC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AD4BDE4622D878BA005BA4CC /* Quizzler.app */,
+				AD4BDE4622D878BA005BA4CC /* Quizzler-iOS13.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AD4BDE4822D878BA005BA4CC /* Quizzler */ = {
+		AD4BDE4822D878BA005BA4CC /* Quizzler-iOS13 */ = {
 			isa = PBXGroup;
 			children = (
 				AD4BDE4922D878BA005BA4CC /* AppDelegate.swift */,
@@ -69,7 +69,7 @@
 				AD4BDE5422D878BC005BA4CC /* LaunchScreen.storyboard */,
 				AD4BDE5722D878BC005BA4CC /* Info.plist */,
 			);
-			path = Quizzler;
+			path = "Quizzler-iOS13";
 			sourceTree = "<group>";
 		};
 		DDA4262A270792A800E43B0C /* Model */ = {
@@ -100,9 +100,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AD4BDE4522D878BA005BA4CC /* Quizzler */ = {
+		AD4BDE4522D878BA005BA4CC /* Quizzler-iOS13 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AD4BDE5A22D878BC005BA4CC /* Build configuration list for PBXNativeTarget "Quizzler" */;
+			buildConfigurationList = AD4BDE5A22D878BC005BA4CC /* Build configuration list for PBXNativeTarget "Quizzler-iOS13" */;
 			buildPhases = (
 				AD4BDE4222D878BA005BA4CC /* Sources */,
 				AD4BDE4322D878BA005BA4CC /* Frameworks */,
@@ -112,9 +112,9 @@
 			);
 			dependencies = (
 			);
-			name = Quizzler;
+			name = "Quizzler-iOS13";
 			productName = "Quizzler-iOS13";
-			productReference = AD4BDE4622D878BA005BA4CC /* Quizzler.app */;
+			productReference = AD4BDE4622D878BA005BA4CC /* Quizzler-iOS13.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -132,7 +132,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AD4BDE4122D878BA005BA4CC /* Build configuration list for PBXProject "Quizzler" */;
+			buildConfigurationList = AD4BDE4122D878BA005BA4CC /* Build configuration list for PBXProject "Quizzler-iOS13" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -145,7 +145,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AD4BDE4522D878BA005BA4CC /* Quizzler */,
+				AD4BDE4522D878BA005BA4CC /* Quizzler-iOS13 */,
 			);
 		};
 /* End PBXProject section */
@@ -249,7 +249,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -304,7 +304,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -325,7 +325,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.androsenkoartem.Quizzler;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.androsenkoartem.Quizzler-iOS13";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -343,7 +343,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.androsenkoartem.Quizzler;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.androsenkoartem.Quizzler-iOS13";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -353,7 +353,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AD4BDE4122D878BA005BA4CC /* Build configuration list for PBXProject "Quizzler" */ = {
+		AD4BDE4122D878BA005BA4CC /* Build configuration list for PBXProject "Quizzler-iOS13" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AD4BDE5822D878BC005BA4CC /* Debug */,
@@ -362,7 +362,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AD4BDE5A22D878BC005BA4CC /* Build configuration list for PBXNativeTarget "Quizzler" */ = {
+		AD4BDE5A22D878BC005BA4CC /* Build configuration list for PBXNativeTarget "Quizzler-iOS13" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AD4BDE5B22D878BC005BA4CC /* Debug */,

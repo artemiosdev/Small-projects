@@ -2,7 +2,7 @@
 //  QuizBrain.swift
 //  Quizzler-iOS13
 //
-//  Created by Artem Androsenko on 1.03.2023.
+//  Created by Artem Androsenko on 2.03.2023
 //
 
 import Foundation
