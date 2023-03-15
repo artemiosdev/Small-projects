@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DDB6CC1429C1B67900BAE503 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB6CC1329C1B67900BAE503 /* CommentCell.swift */; };
+		DDB6CC1629C1BC5400BAE503 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB6CC1529C1BC5400BAE503 /* Comment.swift */; };
 		DDFFA19529C0E394008973EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFFA19429C0E394008973EF /* AppDelegate.swift */; };
 		DDFFA19729C0E394008973EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFFA19629C0E394008973EF /* SceneDelegate.swift */; };
 		DDFFA19929C0E394008973EF /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFFA19829C0E394008973EF /* CommentsViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DDB6CC1329C1B67900BAE503 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		DDB6CC1529C1BC5400BAE503 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		DDFFA19129C0E394008973EF /* MVC-Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVC-Networking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDFFA19429C0E394008973EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDFFA19629C0E394008973EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 		DDFFA1AD29C0E4A6008973EF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DDB6CC1529C1BC5400BAE503 /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				DDFFA19A29C0E394008973EF /* Comments.storyboard */,
+				DDB6CC1329C1B67900BAE503 /* CommentCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -210,9 +216,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDB6CC1629C1BC5400BAE503 /* Comment.swift in Sources */,
 				DDFFA19929C0E394008973EF /* CommentsViewController.swift in Sources */,
 				DDFFA19529C0E394008973EF /* AppDelegate.swift in Sources */,
 				DDFFA19729C0E394008973EF /* SceneDelegate.swift in Sources */,
+				DDB6CC1429C1B67900BAE503 /* CommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
