@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD0A75C029C3A3DB0027D014 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0A75BF29C3A3DB0027D014 /* NetworkService.swift */; };
+		DD0A75C329C3A79A0027D014 /* CommentNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0A75C229C3A79A0027D014 /* CommentNetworkService.swift */; };
+		DD0A75C529C3A9710027D014 /* GetCommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0A75C429C3A9710027D014 /* GetCommentResponse.swift */; };
 		DDB6CC1429C1B67900BAE503 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB6CC1329C1B67900BAE503 /* CommentCell.swift */; };
 		DDB6CC1629C1BC5400BAE503 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB6CC1529C1BC5400BAE503 /* Comment.swift */; };
 		DDFFA19529C0E394008973EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFFA19429C0E394008973EF /* AppDelegate.swift */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD0A75BF29C3A3DB0027D014 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		DD0A75C229C3A79A0027D014 /* CommentNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentNetworkService.swift; sourceTree = "<group>"; };
+		DD0A75C429C3A9710027D014 /* GetCommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCommentResponse.swift; sourceTree = "<group>"; };
 		DDB6CC1329C1B67900BAE503 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		DDB6CC1529C1BC5400BAE503 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		DDFFA19129C0E394008973EF /* MVC-Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVC-Networking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +47,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD0A75BE29C3A3B80027D014 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				DD0A75BF29C3A3DB0027D014 /* NetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		DD0A75C129C3A77B0027D014 /* CommentNetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				DD0A75C229C3A79A0027D014 /* CommentNetworkService.swift */,
+			);
+			path = CommentNetworkService;
+			sourceTree = "<group>";
+		};
 		DDFFA18829C0E394008973EF = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +96,7 @@
 				DDFFA1AA29C0E46D008973EF /* Model */,
 				DDFFA1AB29C0E473008973EF /* View */,
 				DDFFA1AC29C0E482008973EF /* Controller */,
+				DD0A75BE29C3A3B80027D014 /* NetworkService */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -84,6 +107,7 @@
 				DDFFA1AD29C0E4A6008973EF /* Model */,
 				DDFFA1AF29C0E4BF008973EF /* View */,
 				DDFFA1AE29C0E4B3008973EF /* Controller */,
+				DD0A75C129C3A77B0027D014 /* CommentNetworkService */,
 			);
 			path = Comments;
 			sourceTree = "<group>";
@@ -116,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				DDB6CC1529C1BC5400BAE503 /* Comment.swift */,
+				DD0A75C429C3A9710027D014 /* GetCommentResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -220,7 +245,10 @@
 				DDFFA19929C0E394008973EF /* CommentsViewController.swift in Sources */,
 				DDFFA19529C0E394008973EF /* AppDelegate.swift in Sources */,
 				DDFFA19729C0E394008973EF /* SceneDelegate.swift in Sources */,
+				DD0A75C029C3A3DB0027D014 /* NetworkService.swift in Sources */,
+				DD0A75C529C3A9710027D014 /* GetCommentResponse.swift in Sources */,
 				DDB6CC1429C1B67900BAE503 /* CommentCell.swift in Sources */,
+				DD0A75C329C3A79A0027D014 /* CommentNetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
