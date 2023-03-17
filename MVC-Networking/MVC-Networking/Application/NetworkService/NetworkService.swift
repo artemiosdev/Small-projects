@@ -12,7 +12,8 @@ class NetworkService {
     
     private init() {}
     static let shared = NetworkService()
-    
+    // обращаемся по адресу URL, и преобразуем полученные data
+    // в json объект, и благодаря completion передаем дальше
     public func getData(url: URL, completion: @escaping (Any) -> ()) {
         // тоже singleton, встроенный
         let session = URLSession.shared
@@ -20,7 +21,11 @@ class NetworkService {
             guard let data = data else { return }
             do {
                 let json = try JSONSerialization.jsonObject(with: data, options:[])
-                print(json)
+                // передадим наш json дальше
+                // обновление интерфейса в главном потоке
+                DispatchQueue.main.async {
+                    completion(json)
+                }
             } catch {
                 print(error.localizedDescription)
             }
