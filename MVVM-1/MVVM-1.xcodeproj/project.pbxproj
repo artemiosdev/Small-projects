@@ -14,6 +14,7 @@
 		DD412E1629C593120050346D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD412E1529C593120050346D /* Assets.xcassets */; };
 		DD412E1929C593120050346D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD412E1729C593120050346D /* LaunchScreen.storyboard */; };
 		DD412E2129C593230050346D /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD412E2029C593230050346D /* Profile.swift */; };
+		DD412E2329C5A3ED0050346D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD412E2229C5A3ED0050346D /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DD412E1829C593120050346D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD412E1A29C593120050346D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD412E2029C593230050346D /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		DD412E2229C5A3ED0050346D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				DD412E0E29C593110050346D /* SceneDelegate.swift */,
 				DD412E1029C593110050346D /* ViewController.swift */,
 				DD412E2029C593230050346D /* Profile.swift */,
+				DD412E2229C5A3ED0050346D /* ViewModel.swift */,
 				DD412E1229C593110050346D /* Main.storyboard */,
 				DD412E1529C593120050346D /* Assets.xcassets */,
 				DD412E1729C593120050346D /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD412E2329C5A3ED0050346D /* ViewModel.swift in Sources */,
 				DD412E1129C593110050346D /* ViewController.swift in Sources */,
 				DD412E2129C593230050346D /* Profile.swift in Sources */,
 				DD412E0D29C593110050346D /* AppDelegate.swift in Sources */,
