@@ -9,7 +9,7 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
-    @IBOutlet weak var fullName: UILabel!
+    @IBOutlet weak var fullNameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     
     override func awakeFromNib() {
@@ -23,4 +23,11 @@ class TableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    weak var viewModel: TableViewCellViewModelType? {
+        willSet(viewModel) {
+            guard let viewModel = viewModel else { return }
+            fullNameLabel.text = viewModel.fullName
+            ageLabel.text = viewModel.age
+        }
+    }
 }
