@@ -15,6 +15,9 @@
 		DD412E3D29C5AE7A0050346D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD412E3B29C5AE7A0050346D /* LaunchScreen.storyboard */; };
 		DD412E4529C5AFAF0050346D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD412E4429C5AFAF0050346D /* TableViewController.swift */; };
 		DD412E4729C5B2820050346D /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD412E4629C5B2820050346D /* Profile.swift */; };
+		DD8632E329C78CA200F157CD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8632E229C78CA200F157CD /* DetailViewController.swift */; };
+		DD8632E729C78F4600F157CD /* DetailViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8632E629C78F4600F157CD /* DetailViewModelType.swift */; };
+		DD8632E929C78F8800F157CD /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8632E829C78F8800F157CD /* DetailViewModel.swift */; };
 		DDF7C75329C6DDF7000AEABF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF7C75229C6DDF7000AEABF /* ViewModel.swift */; };
 		DDF7C75529C6DF4D000AEABF /* TableViewViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF7C75429C6DF4D000AEABF /* TableViewViewModelType.swift */; };
 		DDF7C75929C6E69F000AEABF /* TableViewCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF7C75829C6E69F000AEABF /* TableViewCellViewModelType.swift */; };
@@ -32,6 +35,9 @@
 		DD412E3E29C5AE7A0050346D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD412E4429C5AFAF0050346D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		DD412E4629C5B2820050346D /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		DD8632E229C78CA200F157CD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DD8632E629C78F4600F157CD /* DetailViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelType.swift; sourceTree = "<group>"; };
+		DD8632E829C78F8800F157CD /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		DDF7C75229C6DDF7000AEABF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		DDF7C75429C6DF4D000AEABF /* TableViewViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewViewModelType.swift; sourceTree = "<group>"; };
 		DDF7C75829C6E69F000AEABF /* TableViewCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModelType.swift; sourceTree = "<group>"; };
@@ -62,6 +68,7 @@
 			children = (
 				DD412E4429C5AFAF0050346D /* TableViewController.swift */,
 				DD2C85FB29C5BAC800993AB8 /* TableViewCell.swift */,
+				DD8632E229C78CA200F157CD /* DetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -104,6 +111,7 @@
 			children = (
 				DDF7C75229C6DDF7000AEABF /* ViewModel.swift */,
 				DDF7C75A29C6E7E0000AEABF /* TableViewCellViewModel.swift */,
+				DD8632E829C78F8800F157CD /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -113,6 +121,7 @@
 			children = (
 				DDF7C75429C6DF4D000AEABF /* TableViewViewModelType.swift */,
 				DDF7C75829C6E69F000AEABF /* TableViewCellViewModelType.swift */,
+				DD8632E629C78F4600F157CD /* DetailViewModelType.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -194,7 +203,10 @@
 				DD412E4729C5B2820050346D /* Profile.swift in Sources */,
 				DD412E4529C5AFAF0050346D /* TableViewController.swift in Sources */,
 				DDF7C75529C6DF4D000AEABF /* TableViewViewModelType.swift in Sources */,
+				DD8632E729C78F4600F157CD /* DetailViewModelType.swift in Sources */,
+				DD8632E929C78F8800F157CD /* DetailViewModel.swift in Sources */,
 				DDF7C75B29C6E7E0000AEABF /* TableViewCellViewModel.swift in Sources */,
+				DD8632E329C78CA200F157CD /* DetailViewController.swift in Sources */,
 				DDF7C75329C6DDF7000AEABF /* ViewModel.swift in Sources */,
 				DD412E3329C5AE770050346D /* SceneDelegate.swift in Sources */,
 			);
