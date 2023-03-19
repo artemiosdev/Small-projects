@@ -8,6 +8,8 @@
 import Foundation
 
 class ViewModel: TableViewViewModelType {
+    private var selectedIndexPath: IndexPath?
+    
     var profiles = [
         Profile(name: "Bob", secondName: "Odenkirk", age: 60),
         Profile(name: "Jonathan", secondName: "Banks", age: 76),
@@ -20,5 +22,14 @@ class ViewModel: TableViewViewModelType {
     func cellViewModel(forIndexPath indexPath: IndexPath) -> TableViewCellViewModelType? {
         let profile = profiles[indexPath.row]
         return TableViewCellViewModel(profile: profile)
+    }
+    
+    func viewModelForSelecterRow() -> DetailViewModelType? {
+        guard let selectedIndexPath = selectedIndexPath else { return nil }
+        return DetailViewModel(profile: profiles[selectedIndexPath.row])
+    }
+    
+    func selectRow(atIndexPath indexPath: IndexPath) {
+        self.selectedIndexPath = indexPath
     }
 }

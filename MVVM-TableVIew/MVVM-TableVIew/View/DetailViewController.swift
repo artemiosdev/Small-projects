@@ -13,7 +13,6 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     var viewModel: DetailViewModelType?
@@ -23,7 +22,5 @@ class DetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         guard let viewModel = viewModel else { return }
         self.textLabel.text = viewModel.description
-
     }
-
 }
