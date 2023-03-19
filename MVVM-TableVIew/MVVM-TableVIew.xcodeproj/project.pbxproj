@@ -15,6 +15,8 @@
 		DD412E3D29C5AE7A0050346D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD412E3B29C5AE7A0050346D /* LaunchScreen.storyboard */; };
 		DD412E4529C5AFAF0050346D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD412E4429C5AFAF0050346D /* TableViewController.swift */; };
 		DD412E4729C5B2820050346D /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD412E4629C5B2820050346D /* Profile.swift */; };
+		DDF7C75329C6DDF7000AEABF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF7C75229C6DDF7000AEABF /* ViewModel.swift */; };
+		DDF7C75529C6DF4D000AEABF /* TableViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF7C75429C6DF4D000AEABF /* TableViewModelType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		DD412E3E29C5AE7A0050346D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD412E4429C5AFAF0050346D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		DD412E4629C5B2820050346D /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		DDF7C75229C6DDF7000AEABF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		DDF7C75429C6DF4D000AEABF /* TableViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModelType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 		DD2C85FE29C5BC5700993AB8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DD412E4429C5AFAF0050346D /* TableViewController.swift */,
 				DD2C85FB29C5BAC800993AB8 /* TableViewCell.swift */,
 			);
 			path = View;
@@ -78,7 +83,8 @@
 			children = (
 				DD412E3029C5AE770050346D /* AppDelegate.swift */,
 				DD412E3229C5AE770050346D /* SceneDelegate.swift */,
-				DD412E4429C5AFAF0050346D /* TableViewController.swift */,
+				DDF7C75629C6E076000AEABF /* ViewModel */,
+				DDF7C75729C6E08E000AEABF /* Protocols */,
 				DD2C85FE29C5BC5700993AB8 /* View */,
 				DD2C85FD29C5BC5000993AB8 /* Model */,
 				DD412E3629C5AE770050346D /* Main.storyboard */,
@@ -87,6 +93,22 @@
 				DD412E3E29C5AE7A0050346D /* Info.plist */,
 			);
 			path = "MVVM-TableVIew";
+			sourceTree = "<group>";
+		};
+		DDF7C75629C6E076000AEABF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DDF7C75229C6DDF7000AEABF /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DDF7C75729C6E08E000AEABF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DDF7C75429C6DF4D000AEABF /* TableViewModelType.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +186,8 @@
 				DD412E3129C5AE770050346D /* AppDelegate.swift in Sources */,
 				DD412E4729C5B2820050346D /* Profile.swift in Sources */,
 				DD412E4529C5AFAF0050346D /* TableViewController.swift in Sources */,
+				DDF7C75529C6DF4D000AEABF /* TableViewModelType.swift in Sources */,
+				DDF7C75329C6DDF7000AEABF /* ViewModel.swift in Sources */,
 				DD412E3329C5AE770050346D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,15 +9,11 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
-    var profiles: [Profile]!
+    var viewModel: TableViewModelType?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        profiles = [
-            Profile(name: "Bob", secondName: "Odenkirk", age: 60),
-            Profile(name: "Jonathan", secondName: "Banks", age: 76),
-            Profile(name: "Michael", secondName: "Mando", age: 41)
-        ]
+        viewModel = ViewModel()
     }
 
     // MARK: - Table view data source
@@ -29,13 +25,17 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return profiles.count
+        return viewModel?.numberOfRows ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCell
-        guard let tableViewCell = cell else { return TableViewCell() }
-        let profile = profiles[indexPath.row]
+        
+        guard let tableViewCell = cell,
+        let viewModel = viewModel else { return TableViewCell() }
+        
+        let profile = viewModel.profiles[indexPath.row]
+        
         tableViewCell.ageLabel.text = "\(profile.age)"
         tableViewCell.fullName.text = "\(profile.name) \(profile.secondName)"
         return tableViewCell
