@@ -18,6 +18,7 @@
 		DD8632E329C78CA200F157CD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8632E229C78CA200F157CD /* DetailViewController.swift */; };
 		DD8632E729C78F4600F157CD /* DetailViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8632E629C78F4600F157CD /* DetailViewModelType.swift */; };
 		DD8632E929C78F8800F157CD /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8632E829C78F8800F157CD /* DetailViewModel.swift */; };
+		DDA3067829C8511F005090C6 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA3067729C8511F005090C6 /* Box.swift */; };
 		DDF7C75329C6DDF7000AEABF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF7C75229C6DDF7000AEABF /* ViewModel.swift */; };
 		DDF7C75529C6DF4D000AEABF /* TableViewViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF7C75429C6DF4D000AEABF /* TableViewViewModelType.swift */; };
 		DDF7C75929C6E69F000AEABF /* TableViewCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF7C75829C6E69F000AEABF /* TableViewCellViewModelType.swift */; };
@@ -38,6 +39,7 @@
 		DD8632E229C78CA200F157CD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DD8632E629C78F4600F157CD /* DetailViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelType.swift; sourceTree = "<group>"; };
 		DD8632E829C78F8800F157CD /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		DDA3067729C8511F005090C6 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		DDF7C75229C6DDF7000AEABF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		DDF7C75429C6DF4D000AEABF /* TableViewViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewViewModelType.swift; sourceTree = "<group>"; };
 		DDF7C75829C6E69F000AEABF /* TableViewCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModelType.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			children = (
 				DD412E3029C5AE770050346D /* AppDelegate.swift */,
 				DD412E3229C5AE770050346D /* SceneDelegate.swift */,
+				DDA3067729C8511F005090C6 /* Box.swift */,
 				DDF7C75629C6E076000AEABF /* ViewModel */,
 				DDF7C75729C6E08E000AEABF /* Protocols */,
 				DD2C85FE29C5BC5700993AB8 /* View */,
@@ -203,6 +206,7 @@
 				DD412E4729C5B2820050346D /* Profile.swift in Sources */,
 				DD412E4529C5AFAF0050346D /* TableViewController.swift in Sources */,
 				DDF7C75529C6DF4D000AEABF /* TableViewViewModelType.swift in Sources */,
+				DDA3067829C8511F005090C6 /* Box.swift in Sources */,
 				DD8632E729C78F4600F157CD /* DetailViewModelType.swift in Sources */,
 				DD8632E929C78F8800F157CD /* DetailViewModel.swift in Sources */,
 				DDF7C75B29C6E7E0000AEABF /* TableViewCellViewModel.swift in Sources */,

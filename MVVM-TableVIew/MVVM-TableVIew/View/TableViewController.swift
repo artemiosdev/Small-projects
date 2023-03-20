@@ -33,13 +33,16 @@ class TableViewController: UITableViewController {
         guard let tableViewCell = cell,
         let viewModel = viewModel else { return TableViewCell() }
         
+        // генерируем новую viewModel для нашей ячейки
         let cellViewModel = viewModel.cellViewModel(forIndexPath: indexPath)
         tableViewCell.viewModel = cellViewModel
         return tableViewCell
     }
 
+    // переход на DetailViewController при нажатии на ячейку
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let viewModel = viewModel else { return }
+        // определяем/фиксируем выделенную ячейку таблицы
         viewModel.selectRow(atIndexPath: indexPath)
         performSegue(withIdentifier: "detailSegue", sender: nil)
     }
@@ -48,6 +51,7 @@ class TableViewController: UITableViewController {
         guard let identifier = segue.identifier, let viewModel = viewModel else { return }
         if identifier == "detailSegue" {
             if let dvc = segue.destination as? DetailViewController {
+                // генерируем новую ViewModel для DetailViewController
                 dvc.viewModel = viewModel.viewModelForSelecterRow()
             }
         }

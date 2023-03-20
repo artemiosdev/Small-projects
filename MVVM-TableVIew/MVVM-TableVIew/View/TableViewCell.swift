@@ -23,6 +23,8 @@ class TableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    // перед тем как ViewModel будет установлена
+    // мы берем ее будущее значение и помещаем в labels
     weak var viewModel: TableViewCellViewModelType? {
         willSet(viewModel) {
             guard let viewModel = viewModel else { return }

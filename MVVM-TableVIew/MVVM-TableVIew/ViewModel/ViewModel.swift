@@ -19,11 +19,13 @@ class ViewModel: TableViewViewModelType {
         return profiles.count
     }
     
+    // отдельная viewModel для нашей ячейки
     func cellViewModel(forIndexPath indexPath: IndexPath) -> TableViewCellViewModelType? {
         let profile = profiles[indexPath.row]
         return TableViewCellViewModel(profile: profile)
     }
     
+    // генерируем новую ViewModel для DetailViewController
     func viewModelForSelecterRow() -> DetailViewModelType? {
         guard let selectedIndexPath = selectedIndexPath else { return nil }
         return DetailViewModel(profile: profiles[selectedIndexPath.row])
