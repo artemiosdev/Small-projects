@@ -1,5 +1,57 @@
 Примеры маленьких приложений, с целью знакомства и изучения различного функционала. В каждом из них есть готовые шаблоны/примеры использования. Ниже описание:
 
+---
+### [MVVM-TableVIew](https://github.com/artemiosdev/Small-projects/tree/main/MVVM-TableVIew/MVVM-TableVIew)
+
+<img alt="image" src="images/MVVM-TableVIew.gif"  height = 510 width = 233/>
+
+---
+
+### [Quizzler-MultipleChoice](https://github.com/artemiosdev/Small-projects/tree/main/Quizzler-MultipleChoice/Quizzler-iOS13)
+
+<img alt="image" src="images/Quizzler-MultipleChoice.gif"  height = 510 width = 233/>
+
+---
+
+### [Quizzler](https://github.com/artemiosdev/Small-projects/tree/main/Quizzler/Quizzler-iOS13)
+
+<img alt="image" src="images/Quizzler.gif"  height = 510 width = 233/>
+
+---
+
+### [Contacts](https://github.com/artemiosdev/Small-projects/tree/main/Contacts)
+
+<img alt="image" src="imagesContacts .gif"  height = 510 width = 233/>
+
+---
+
+### [Tipsy](https://github.com/artemiosdev/Small-projects/tree/main/Tipsy/Tipsy)
+
+<img alt="image" src="images/Tipsy.gif"  height = 510 width = 233/>
+
+---
+
+### [Destini](https://github.com/artemiosdev/Small-projects/tree/main/Destini/Destini-iOS13)
+
+<img alt="image" src="images/Destini.gif"  height = 510 width = 233/>
+
+---
+
+### [ByteCoin](https://github.com/artemiosdev/Small-projects/tree/main/ByteCoin/ByteCoin)
+
+<img alt="image" src="images/ByteCoin.gif"  height = 510 width = 233/>
+
+---
+
+### [EggTimer](https://github.com/artemiosdev/Small-projects/tree/main/EggTimer/EggTimer)
+
+<img alt="image" src="images/EggTimer.gif"  height = 510 width = 233/>
+
+---
+
+### [MVC-Networking](https://github.com/artemiosdev/Small-projects/tree/main/MVC-Networking/MVC-Networking)
+
+<img alt="image" src="images/mvc.jpeg"  height = 510 width = 233/>
 
 ---
 ### [Sunny](https://github.com/artemiosdev/Small-projects/tree/main/Sunny/Sunny)
