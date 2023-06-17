@@ -1,6 +1,12 @@
 Примеры маленьких приложений, с целью знакомства и изучения различного функционала. В каждом из них есть готовые шаблоны/примеры использования. Ниже описание:
 
 ---
+### [BMI-Calculator](https://github.com/artemiosdev/Small-projects/tree/main/BMI_Calculator/BMI%20Calculator)
+
+<img alt="image" src="images/BMI-Calculator.gif"  height = 510 width = 233/>
+
+
+---
 ### [MVVM-TableVIew](https://github.com/artemiosdev/Small-projects/tree/main/MVVM-TableVIew/MVVM-TableVIew)
 
 <img alt="image" src="images/MVVM-TableVIew.gif"  height = 510 width = 233/>
